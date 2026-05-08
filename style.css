@@ -453,7 +453,7 @@ nav {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.9);
+    background: #1a1a1a;
     z-index: 9999;
     display: flex;
     flex-direction: column;
@@ -471,9 +471,34 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px 24px;
+    padding: 12px 20px;
     background: var(--dark);
     flex-shrink: 0;
+    gap: 20px;
+}
+
+.viewer-back {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 16px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+    flex-shrink: 0;
+}
+
+.viewer-back:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.viewer-back i {
+    font-size: 0.85rem;
 }
 
 .viewer-header h2 {
@@ -481,6 +506,38 @@ nav {
     font-weight: 500;
     color: white;
     margin: 0;
+    flex: 1;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.viewer-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.viewer-download-btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background 0.2s;
+    text-decoration: none;
+}
+
+.viewer-download-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
 }
 
 .viewer-close {
@@ -489,23 +546,24 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: transparent;
+    background: rgba(255, 255, 255, 0.1);
     border: none;
     color: white;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     cursor: pointer;
     border-radius: 6px;
     transition: background 0.2s;
 }
 
 .viewer-close:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.2);
 }
 
 .viewer-body {
     flex: 1;
     padding: 0;
     display: flex;
+    background: #525252;
 }
 
 .viewer-body iframe {
@@ -514,6 +572,37 @@ nav {
     border: none;
     background: white;
 }
+
+/* ============================================
+   RESPONSIVE - VIEWER
+   ============================================ */
+
+@media (max-width: 768px) {
+    .viewer-header {
+        padding: 10px 12px;
+        gap: 10px;
+    }
+
+    .viewer-back {
+        padding: 8px 12px;
+        font-size: 0.85rem;
+    }
+
+    .viewer-back span {
+        display: none;
+    }
+
+    .viewer-header h2 {
+        font-size: 0.85rem;
+    }
+
+    .viewer-download-btn,
+    .viewer-close {
+        width: 36px;
+        height: 36px;
+    }
+}
+
 
 /* ============================================
    SKILLS PAGE
