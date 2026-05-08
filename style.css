@@ -321,6 +321,428 @@ body {
 }
 
 /* ============================================
+   INNER PAGES - CONSISTENT STYLING
+   ============================================ */
+
+.inner-page {
+    background: var(--light);
+    min-height: 100vh;
+}
+
+/* Inner Page Navigation */
+.inner-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 40px;
+    background: white;
+    border-bottom: 1px solid var(--border);
+    z-index: 1000;
+}
+
+.inner-nav .nav-logo {
+    position: absolute;
+    left: 40px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--dark);
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.nav-menu-center {
+    display: flex;
+    gap: 40px;
+}
+
+.nav-menu-center a {
+    color: var(--gray);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.2s;
+    padding: 8px 0;
+}
+
+.nav-menu-center a:hover {
+    color: var(--dark);
+}
+
+.nav-menu-center a.active {
+    color: var(--dark);
+    position: relative;
+}
+
+.nav-menu-center a.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--accent);
+    border-radius: 1px;
+}
+
+/* Page Content */
+.inner-page .page-content {
+    padding: 120px 0 80px;
+    min-height: calc(100vh - 80px);
+}
+
+.inner-page .page-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 50px;
+    color: var(--dark);
+    letter-spacing: -0.5px;
+}
+
+/* About Page Styling */
+.inner-page .about-content {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.inner-page .profile-photo {
+    width: 280px;
+    height: 280px;
+    border-radius: 16px;
+    object-fit: cover;
+    border: none;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    flex-shrink: 0;
+}
+
+.inner-page .about-text p {
+    font-size: 1.05rem;
+    color: var(--gray);
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.inner-page .about-text h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--dark);
+    margin-top: 40px;
+    margin-bottom: 24px;
+    letter-spacing: -0.3px;
+}
+
+.inner-page .timeline {
+    border-left: 2px solid var(--border);
+    padding-left: 28px;
+    margin-left: 0;
+}
+
+.inner-page .timeline-item {
+    position: relative;
+    margin-bottom: 28px;
+    padding-bottom: 4px;
+}
+
+.inner-page .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -35px;
+    top: 6px;
+    width: 12px;
+    height: 12px;
+    background: var(--accent);
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 0 0 2px var(--accent);
+}
+
+.inner-page .timeline-item h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 6px;
+}
+
+.inner-page .timeline-meta {
+    font-size: 0.9rem;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.inner-page .timeline-item p:last-child {
+    font-size: 0.95rem;
+    color: var(--gray);
+    line-height: 1.6;
+}
+
+.inner-page .cv-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 30px;
+    padding: 14px 28px;
+    background: var(--dark);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.inner-page .cv-button:hover {
+    background: var(--accent);
+    transform: translateY(-2px);
+}
+
+/* Projects Page Styling */
+.inner-page .filter-container {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.inner-page .filter-btn {
+    padding: 10px 22px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--gray);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.inner-page .filter-btn:hover {
+    border-color: var(--dark);
+    color: var(--dark);
+}
+
+.inner-page .filter-btn.active {
+    background: var(--dark);
+    border-color: var(--dark);
+    color: white;
+}
+
+.inner-page .projects-list {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.inner-page .project-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px 32px;
+    transition: all 0.2s;
+}
+
+.inner-page .project-card:hover {
+    border-color: #cbd5e1;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.inner-page .project-content h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 10px;
+}
+
+.inner-page .project-content > p {
+    font-size: 0.95rem;
+    color: var(--gray);
+    line-height: 1.7;
+}
+
+.inner-page .project-bullets li {
+    font-size: 0.9rem;
+    color: var(--gray);
+    opacity: 0.85;
+}
+
+.inner-page .tag {
+    background: var(--light);
+    color: var(--gray);
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.inner-page .btn-view {
+    padding: 10px 20px;
+    background: var(--dark);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.inner-page .btn-view:hover {
+    background: var(--accent);
+}
+
+.inner-page .btn-view-small {
+    padding: 8px 18px;
+    background: var(--dark);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.inner-page .btn-view-small:hover {
+    background: var(--accent);
+}
+
+.inner-page .btn-link {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gray);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    transition: all 0.2s;
+    text-decoration: none;
+}
+
+.inner-page .btn-link:hover {
+    color: var(--dark);
+    border-color: var(--dark);
+}
+
+.inner-page .doc-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--dark);
+}
+
+.inner-page .doc-description {
+    font-size: 0.9rem;
+    color: var(--gray);
+    line-height: 1.6;
+}
+
+/* Inner Page Footer */
+.inner-footer {
+    background: var(--dark);
+    padding: 30px 20px;
+}
+
+.inner-footer .footer-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inner-footer .footer-content p {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.inner-footer .footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.inner-footer .footer-links a {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1.1rem;
+    transition: color 0.2s;
+}
+
+.inner-footer .footer-links a:hover {
+    color: white;
+}
+
+/* ============================================
+   RESPONSIVE - INNER PAGES
+   ============================================ */
+
+@media (max-width: 768px) {
+    .inner-nav {
+        padding: 16px 20px;
+    }
+
+    .inner-nav .nav-logo {
+        position: static;
+    }
+
+    .nav-menu-center {
+        display: none;
+    }
+
+    .inner-page .page-title {
+        font-size: 2rem;
+    }
+
+    .inner-page .about-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .inner-page .profile-photo {
+        width: 220px;
+        height: 220px;
+    }
+
+    .inner-page .timeline {
+        text-align: left;
+    }
+
+    .inner-page .project-card {
+        padding: 24px;
+    }
+
+    .inner-page .document-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+    }
+
+    .inner-page .doc-actions {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .inner-page .btn-view-small {
+        flex: 1;
+        text-align: center;
+    }
+
+    .inner-footer .footer-content {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}
+
+/* ============================================
    STANDARD NAVIGATION (OTHER PAGES)
    ============================================ */
 
