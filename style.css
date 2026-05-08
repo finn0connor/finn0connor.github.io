@@ -941,3 +941,456 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+/* ============================================
+   INDEX PAGE - HERO ENHANCEMENTS
+   ============================================ */
+
+.hero-description {
+    font-size: 1.1rem;
+    opacity: 0.85;
+    max-width: 500px;
+    margin: 0 auto 30px;
+    line-height: 1.6;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-button-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 30px;
+    background: transparent;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    border: 2px solid white;
+    transition: all 0.3s;
+}
+
+.cta-button-secondary:hover {
+    background: white;
+    color: var(--primary);
+}
+
+/* ============================================
+   QUICK ABOUT SECTION
+   ============================================ */
+
+#quick-about {
+    padding: 80px 0;
+    background: white;
+}
+
+.quick-about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.quick-about-text h2 {
+    font-size: 2rem;
+    color: var(--dark);
+    margin-bottom: 20px;
+}
+
+.quick-about-text p {
+    font-size: 1rem;
+    color: var(--gray);
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    margin-top: 10px;
+    transition: gap 0.2s;
+}
+
+.text-link:hover {
+    gap: 12px;
+}
+
+.quick-about-highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.highlight-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 24px;
+    background: var(--light);
+    border-radius: 10px;
+    border: 1px solid var(--border);
+}
+
+.highlight-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--dark);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.highlight-icon i {
+    font-size: 1.2rem;
+    color: white;
+}
+
+.highlight-info h3 {
+    font-size: 0.85rem;
+    color: var(--gray);
+    font-weight: 500;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.highlight-info p {
+    font-size: 1rem;
+    color: var(--dark);
+    font-weight: 600;
+    margin: 0;
+}
+
+.highlight-info span {
+    font-size: 0.9rem;
+    color: var(--gray);
+}
+
+/* ============================================
+   FEATURED PROJECTS SECTION
+   ============================================ */
+
+#featured-projects {
+    padding: 80px 0;
+    background: var(--light);
+}
+
+#featured-projects h2 {
+    font-size: 2rem;
+    color: var(--dark);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.featured-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.featured-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.featured-card:hover {
+    border-color: var(--gray);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.featured-content h3 {
+    font-size: 1.1rem;
+    color: var(--dark);
+    margin-bottom: 10px;
+}
+
+.featured-content p {
+    font-size: 0.9rem;
+    color: var(--gray);
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.featured-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 20px;
+}
+
+.featured-tags span {
+    font-size: 0.75rem;
+    color: var(--gray);
+    background: var(--light);
+    padding: 3px 10px;
+    border-radius: 12px;
+}
+
+.featured-link {
+    width: 40px;
+    height: 40px;
+    background: var(--dark);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    transition: background 0.2s;
+    align-self: flex-end;
+}
+
+.featured-link:hover {
+    background: var(--primary);
+}
+
+.section-cta {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* ============================================
+   EXPERIENCE PREVIEW SECTION
+   ============================================ */
+
+#experience-preview {
+    padding: 80px 0;
+    background: white;
+}
+
+#experience-preview h2 {
+    font-size: 2rem;
+    color: var(--dark);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.experience-list {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.experience-item {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.experience-item:last-child {
+    border-bottom: none;
+}
+
+.experience-date {
+    font-size: 0.85rem;
+    color: var(--gray);
+    width: 150px;
+    flex-shrink: 0;
+}
+
+.experience-info h3 {
+    font-size: 1rem;
+    color: var(--dark);
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.experience-company {
+    font-size: 0.9rem;
+    color: var(--gray);
+}
+
+/* ============================================
+   CONTACT CTA SECTION
+   ============================================ */
+
+#contact-cta {
+    padding: 80px 0;
+    background: var(--dark);
+}
+
+.contact-cta-content {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-cta-content h2 {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.contact-cta-content p {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.contact-cta-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#contact-cta .cta-button {
+    background: white;
+    color: var(--dark);
+}
+
+#contact-cta .cta-button:hover {
+    background: var(--primary);
+    color: white;
+}
+
+#contact-cta .cta-button-secondary {
+    border-color: rgba(255, 255, 255, 0.3);
+    color: white;
+}
+
+#contact-cta .cta-button-secondary:hover {
+    background: white;
+    color: var(--dark);
+    border-color: white;
+}
+
+/* ============================================
+   FOOTER ENHANCEMENTS
+   ============================================ */
+
+footer {
+    background: #0f172a;
+    padding: 30px 20px;
+}
+
+.footer-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-content p {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1.1rem;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+/* ============================================
+   RESPONSIVE - INDEX PAGE
+   ============================================ */
+
+@media (max-width: 900px) {
+    .featured-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cta-button,
+    .cta-button-secondary {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+    }
+
+    .quick-about-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .quick-about-text {
+        text-align: center;
+    }
+
+    .quick-about-text h2 {
+        font-size: 1.75rem;
+    }
+
+    #featured-projects h2,
+    #experience-preview h2,
+    .contact-cta-content h2 {
+        font-size: 1.75rem;
+    }
+
+    .experience-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .experience-date {
+        width: auto;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .contact-cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #contact-cta .cta-button,
+    #contact-cta .cta-button-secondary {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+    }
+}
