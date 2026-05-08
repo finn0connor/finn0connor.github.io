@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name | Portfolio</title>
+    <title>Finn O'Connor | Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <nav>
         <div class="nav-container">
-            <a href="index.html" class="logo">YN</a>
+            <a href="index.html" class="logo">FOC</a>
             <ul class="nav-links">
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -23,19 +23,207 @@
 
     <header id="hero">
         <div class="hero-content">
-            <h1>Your Name</h1>
-            <p class="tagline">Data Scientist | Energy Analyst | Problem Solver</p>
+            <h1>Finn O'Connor</h1>
+            <p class="tagline">Engineering Student | Energy Trading Enthusiast</p>
+            <p class="hero-description">
+                M.Eng student at Trinity College Dublin with a passion for energy markets, 
+                data science, and quantitative analysis.
+            </p>
             <div class="social-links">
-                <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/yourusername" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:your.email@example.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com/finn0connor" target="_blank" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/finn-oconnor" target="_blank" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:foconno1@tcd.ie" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
             </div>
-            <a href="projects.html" class="cta-button">View My Work</a>
+            <div class="hero-buttons">
+                <a href="projects.html" class="cta-button">View My Work</a>
+                <a href="docs/cv-finn-oconnor.pdf" class="cta-button-secondary" download>
+                    <i class="fas fa-download"></i> Download CV
+                </a>
+            </div>
         </div>
     </header>
 
+    <!-- Quick About Section -->
+    <section id="quick-about">
+        <div class="container">
+            <div class="quick-about-content">
+                <div class="quick-about-text">
+                    <h2>About Me</h2>
+                    <p>
+                        I'm a Master of Engineering student at Trinity College Dublin, currently on industrial 
+                        placement at ElectroRoute where I support power and gas trading operations through 
+                        market analysis, KPI reporting, and algorithm development.
+                    </p>
+                    <p>
+                        My interests lie at the intersection of engineering, data science, and energy markets. 
+                        I enjoy building analytical tools with Python and SQL, and I'm passionate about 
+                        applying quantitative methods to real-world trading problems.
+                    </p>
+                    <a href="about.html" class="text-link">Learn more about me <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="quick-about-highlights">
+                    <div class="highlight-card">
+                        <div class="highlight-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="highlight-info">
+                            <h3>Education</h3>
+                            <p>M.Eng Mechanical Engineering</p>
+                            <span>Trinity College Dublin</span>
+                        </div>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="highlight-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="highlight-info">
+                            <h3>Current Role</h3>
+                            <p>Energy Trading Intern</p>
+                            <span>ElectroRoute</span>
+                        </div>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="highlight-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="highlight-info">
+                            <h3>Grade</h3>
+                            <p>First-Class Honours</p>
+                            <span>75% Average</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section id="featured-projects">
+        <div class="container">
+            <h2>Featured Projects</h2>
+            <div class="featured-grid">
+                <div class="featured-card">
+                    <div class="featured-content">
+                        <h3>Energy Trading Internship</h3>
+                        <p>Built analysis and forecasting tools with Python and SQL for power and gas trading operations at ElectroRoute.</p>
+                        <div class="featured-tags">
+                            <span>Python</span>
+                            <span>SQL</span>
+                            <span>Energy Markets</span>
+                        </div>
+                    </div>
+                    <a href="projects.html" class="featured-link">
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="featured-card">
+                    <div class="featured-content">
+                        <h3>Quantitative Trading Strategies</h3>
+                        <p>Designed systematic trading strategies in Python and MATLAB, backtested with market APIs at Trinity SMF.</p>
+                        <div class="featured-tags">
+                            <span>Python</span>
+                            <span>MATLAB</span>
+                            <span>Backtesting</span>
+                        </div>
+                    </div>
+                    <a href="projects.html" class="featured-link">
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="featured-card">
+                    <div class="featured-content">
+                        <h3>Formula Trinity Drivetrain</h3>
+                        <p>Designed and simulated drivetrain components using SolidWorks and ANSYS for Trinity's Formula Student team.</p>
+                        <div class="featured-tags">
+                            <span>SolidWorks</span>
+                            <span>ANSYS</span>
+                            <span>CAD</span>
+                        </div>
+                    </div>
+                    <a href="projects.html" class="featured-link">
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="section-cta">
+                <a href="projects.html" class="text-link">View all projects <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Timeline -->
+    <section id="experience-preview">
+        <div class="container">
+            <h2>Experience</h2>
+            <div class="experience-list">
+                <div class="experience-item">
+                    <div class="experience-date">Jan 2026 – Present</div>
+                    <div class="experience-info">
+                        <h3>Energy Trading Intern</h3>
+                        <span class="experience-company">ElectroRoute</span>
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-date">Mar 2026 – Present</div>
+                    <div class="experience-info">
+                        <h3>Head of Professional Development</h3>
+                        <span class="experience-company">Trinity Commodities Society</span>
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-date">May 2025 – Aug 2025</div>
+                    <div class="experience-info">
+                        <h3>Mechanical Engineering Intern</h3>
+                        <span class="experience-company">Kirby Group Engineering</span>
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-date">Feb 2023 – Apr 2025</div>
+                    <div class="experience-info">
+                        <h3>Quantitative Trading Analyst</h3>
+                        <span class="experience-company">Trinity Student Managed Fund</span>
+                    </div>
+                </div>
+            </div>
+            <div class="section-cta">
+                <a href="about.html" class="text-link">View full experience <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section id="contact-cta">
+        <div class="container">
+            <div class="contact-cta-content">
+                <h2>Get In Touch</h2>
+                <p>I'm always open to discussing new opportunities, interesting projects, or just having a chat about energy markets.</p>
+                <div class="contact-cta-buttons">
+                    <a href="mailto:foconno1@tcd.ie" class="cta-button">
+                        <i class="fas fa-envelope"></i> Email Me
+                    </a>
+                    <a href="https://linkedin.com/in/finn-oconnor" target="_blank" class="cta-button-secondary">
+                        <i class="fab fa-linkedin"></i> Connect on LinkedIn
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer>
-        <p>&copy; 2024 Your Name. Built with GitHub Pages.</p>
+        <div class="footer-content">
+            <p>&copy; 2025 Finn O'Connor. Built with GitHub Pages.</p>
+            <div class="footer-links">
+                <a href="https://github.com/finn0connor" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/finn-oconnor" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:foconno1@tcd.ie"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
