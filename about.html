@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | Your Name</title>
+    <title>About | Finn O'Connor</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-    <nav>
-        <div class="nav-container">
-            <a href="index.html" class="logo">YN</a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" class="active">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="skills.html">Skills</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+<body class="inner-page">
+
+    <!-- Navigation -->
+    <nav class="inner-nav">
+        <a href="index.html" class="nav-logo">FOC</a>
+        <div class="nav-menu-center">
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="skills.html">Skills</a>
+            <a href="contact.html">Contact</a>
         </div>
     </nav>
 
@@ -26,48 +26,175 @@
             <h1 class="page-title">About Me</h1>
             
             <div class="about-content">
-                <img src="images/profile.jpg" alt="Profile Photo" class="profile-photo">
+                <div class="about-sidebar">
+                    <img src="images/profile.jpg" alt="Finn O'Connor" class="profile-photo">
+                    
+                    <div class="about-quick-info">
+                        <div class="quick-info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Dublin, Ireland</span>
+                        </div>
+                        <div class="quick-info-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Trinity College Dublin</span>
+                        </div>
+                        <div class="quick-info-item">
+                            <i class="fas fa-briefcase"></i>
+                            <span>ElectroRoute</span>
+                        </div>
+                    </div>
+
+                    <div class="about-links">
+                        <a href="docs/cv-finn-oconnor.pdf" class="cv-button" download>
+                            <i class="fas fa-download"></i> Download CV
+                        </a>
+                        <a href="https://github.com/finn0connor" target="_blank" class="cv-button secondary">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="https://linkedin.com/in/finn-oconnor" target="_blank" class="cv-button secondary">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                    </div>
+                </div>
+
                 <div class="about-text">
-                    <p>Hello! I'm a data scientist with a passion for energy markets and forecasting. I specialise in building machine learning models that solve real-world problems.</p>
-                    <p>Currently working on demand forecasting and trading analytics, I enjoy turning complex data into actionable insights.</p>
-                    <p>With a background in mathematics and statistics, I bring a rigorous analytical approach to every project. I'm particularly interested in time series forecasting, ensemble methods, and the intersection of data science with energy trading.</p>
+                    <p class="about-intro">
+                        I'm an engineering student at Trinity College Dublin with a passion for energy trading, 
+                        data science, and quantitative analysis. Currently on industrial placement at ElectroRoute, 
+                        I support power and gas trading operations through market analysis, KPI reporting, and 
+                        algorithm development.
+                    </p>
+                    <p>
+                        My interests lie at the intersection of engineering, data science, and energy markets. 
+                        I enjoy building analytical tools with Python and SQL, and I'm particularly drawn to 
+                        time series forecasting, machine learning, and the application of quantitative methods 
+                        to real-world trading problems.
+                    </p>
+                    <p>
+                        Outside of work, I'm a founding member of Ireland's first commodities-focused student society, 
+                        where I lead initiatives including market research reports, industry speaker events, and trading workshops.
+                    </p>
                     
                     <h2>Education</h2>
                     <div class="timeline">
                         <div class="timeline-item">
-                            <h3>MSc Data Science</h3>
-                            <p class="timeline-meta">University Name | 2022 - 2023</p>
-                            <p>Focused on machine learning, statistical modelling, and applied data analysis.</p>
-                        </div>
-                        <div class="timeline-item">
-                            <h3>BSc Mathematics</h3>
-                            <p class="timeline-meta">University Name | 2018 - 2022</p>
-                            <p>Strong foundation in statistics, linear algebra, and computational methods.</p>
+                            <h3>M.Eng Mechanical & Manufacturing Engineering</h3>
+                            <p class="timeline-meta">Trinity College Dublin | Sept 2022 – May 2027</p>
+                            <p class="timeline-grade">First-Class Honours (75%)</p>
+                            <p>Relevant coursework includes Engineering Mathematics, Probability & Statistics, 
+                               Computational Science, Thermodynamics, Fluid Mechanics, Signals & Systems, and Research Methods.</p>
                         </div>
                     </div>
 
                     <h2>Experience</h2>
                     <div class="timeline">
                         <div class="timeline-item">
-                            <h3>Data Scientist</h3>
-                            <p class="timeline-meta">Energy Company | 2023 - Present</p>
-                            <p>Developing demand forecasting models and trading analytics tools for the energy trading desk.</p>
+                            <h3>Energy Trading Intern</h3>
+                            <p class="timeline-meta">ElectroRoute | Jan 2026 – Present</p>
+                            <p>Supporting power and gas trading operations through market analysis, KPI reporting, 
+                               and algorithm development. Building analysis and forecasting tools with Python and SQL 
+                               using live market and asset data. Formulating paper trading strategies for ISEM and GB power markets.</p>
                         </div>
                         <div class="timeline-item">
-                            <h3>Data Analyst Intern</h3>
-                            <p class="timeline-meta">Tech Company | Summer 2022</p>
-                            <p>Built dashboards and automated reporting pipelines using Python and SQL.</p>
+                            <h3>Head of Professional Development & Outreach</h3>
+                            <p class="timeline-meta">Trinity Commodities Society | Mar 2026 – Present</p>
+                            <p>Founding member of Ireland's first commodities-focused student society. Leading initiatives 
+                               including market research reports, industry speaker events, and trading workshops. Developing 
+                               partnerships with industry professionals and firms.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h3>Mechanical Engineering Intern</h3>
+                            <p class="timeline-meta">Kirby Group Engineering | May 2025 – Aug 2025</p>
+                            <p>Contributed to the development of AstraZeneca Alexion's new pharmaceutical manufacturing facility. 
+                               Applied knowledge in fluid mechanics, thermodynamics, and CAD.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h3>Quantitative Trading Analyst</h3>
+                            <p class="timeline-meta">Trinity Student Managed Fund | Feb 2023 – Apr 2025</p>
+                            <p>Helped design systematic trading strategies in Python & MATLAB, backtested with market APIs. 
+                               Also served as Macroeconomic Analyst and Basic Materials Analyst.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h3>Drivetrain Engineer</h3>
+                            <p class="timeline-meta">Formula Trinity | Oct 2024 – Sep 2025</p>
+                            <p>Designed and simulated drivetrain components using SolidWorks and ANSYS for Trinity's Formula Student team.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h3>Spring Insight Participant</h3>
+                            <p class="timeline-meta">Susquehanna International Group (SIG) | Feb 2024</p>
+                            <p>Gained exposure to proprietary trading, options market making, and SIG's probabilistic decision-making methods.</p>
                         </div>
                     </div>
 
-                    <a href="docs/cv.pdf" class="cv-button" target="_blank"><i class="fas fa-download"></i> Download CV</a>
+                    <h2>Certifications</h2>
+                    <div class="certifications-list">
+                        <div class="cert-item">
+                            <i class="fas fa-certificate"></i>
+                            <span>Data Scientist in Python</span>
+                        </div>
+                        <div class="cert-item">
+                            <i class="fas fa-certificate"></i>
+                            <span>Python & Machine Learning for Financial Analysis</span>
+                        </div>
+                        <div class="cert-item">
+                            <i class="fas fa-certificate"></i>
+                            <span>Energy Traders Europe: Energy Market Fundamentals</span>
+                        </div>
+                        <div class="cert-item">
+                            <i class="fas fa-certificate"></i>
+                            <span>Bloomberg Market Concepts</span>
+                        </div>
+                    </div>
+
+                    <h2>Achievements & Interests</h2>
+                    <div class="achievements-grid">
+                        <div class="achievement-item">
+                            <i class="fas fa-trophy"></i>
+                            <div>
+                                <h4>Castleknock College Deputy School Captain</h4>
+                                <p>2022</p>
+                            </div>
+                        </div>
+                        <div class="achievement-item">
+                            <i class="fas fa-running"></i>
+                            <div>
+                                <h4>Bologna Marathon Finisher</h4>
+                                <p>2025</p>
+                            </div>
+                        </div>
+                        <div class="achievement-item">
+                            <i class="fas fa-football-ball"></i>
+                            <div>
+                                <h4>Trinity Rugby DUFC First XV</h4>
+                                <p>Current</p>
+                            </div>
+                        </div>
+                        <div class="achievement-item">
+                            <i class="fas fa-music"></i>
+                            <div>
+                                <h4>RIAM Grade 6 Pianist</h4>
+                                <p>Piano & Saxophone</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="interests-text">
+                        <strong>Interests:</strong> Running, rugby, golf, piano, saxophone, acrylic painting, Formula 1, geopolitics, energy economics.
+                    </p>
                 </div>
             </div>
         </div>
     </main>
 
-    <footer>
-        <p>&copy; 2024 Your Name. Built with GitHub Pages.</p>
+    <footer class="inner-footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Finn O'Connor</p>
+            <div class="footer-links">
+                <a href="https://github.com/finn0connor" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/finn-oconnor" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:foconno1@tcd.ie"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
