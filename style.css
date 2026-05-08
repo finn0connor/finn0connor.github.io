@@ -30,7 +30,10 @@ body {
     padding: 0 20px;
 }
 
-/* Navigation */
+/* ============================================
+   NAVIGATION
+   ============================================ */
+
 nav {
     position: fixed;
     top: 0;
@@ -75,7 +78,10 @@ nav {
     color: var(--primary);
 }
 
-/* Hero Section */
+/* ============================================
+   HERO SECTION (HOME PAGE)
+   ============================================ */
+
 #hero {
     min-height: 100vh;
     display: flex;
@@ -133,7 +139,10 @@ nav {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-/* Page Content */
+/* ============================================
+   PAGE CONTENT (SHARED)
+   ============================================ */
+
 .page-content {
     padding: 120px 0 80px;
     min-height: 100vh;
@@ -153,7 +162,10 @@ nav {
     margin-bottom: 50px;
 }
 
-/* About Section */
+/* ============================================
+   ABOUT PAGE
+   ============================================ */
+
 .about-content {
     display: flex;
     gap: 50px;
@@ -242,35 +254,39 @@ nav {
     font-size: 0.95rem;
 }
 
-/* Project Filters */
+/* ============================================
+   PROJECTS PAGE
+   ============================================ */
+
+/* Filter Buttons */
 .filter-container {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 10px;
     margin-bottom: 40px;
     flex-wrap: wrap;
 }
 
 .filter-btn {
-    padding: 10px 20px;
-    background: white;
-    border: 2px solid var(--border);
-    border-radius: 25px;
-    font-size: 0.9rem;
+    padding: 8px 18px;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    font-size: 0.85rem;
     font-weight: 500;
     color: var(--gray);
     cursor: pointer;
-    transition: all 0.3s;
+    transition: all 0.2s;
 }
 
 .filter-btn:hover {
-    border-color: var(--primary);
-    color: var(--primary);
+    border-color: var(--dark);
+    color: var(--dark);
 }
 
 .filter-btn.active {
-    background: var(--primary);
-    border-color: var(--primary);
+    background: var(--dark);
+    border-color: var(--dark);
     color: white;
 }
 
@@ -278,206 +294,231 @@ nav {
 .projects-list {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 16px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.project-item {
+/* Project Card */
+.project-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 28px;
     background: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    overflow: hidden;
-    transition: box-shadow 0.3s;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-.project-item:hover {
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+.project-card:hover {
+    border-color: var(--gray);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
 }
 
-.project-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 30px;
-    gap: 20px;
-}
-
-.project-title-section {
+.project-content {
     flex: 1;
+    min-width: 0;
 }
 
-.project-title-section h2 {
-    color: var(--dark);
-    font-size: 1.4rem;
-    margin-bottom: 12px;
-}
-
-.project-description {
-    color: var(--gray);
-    font-size: 1rem;
-    line-height: 1.7;
-    margin-bottom: 15px;
-}
-
-.project-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 15px;
-}
-
-.project-tags span {
-    background: var(--light);
-    color: var(--primary);
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 500;
-}
-
-.project-item .project-links {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.project-item .project-links a {
-    color: var(--primary);
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 0.9rem;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    transition: color 0.3s;
-}
-
-.project-item .project-links a:hover {
-    color: var(--primary-dark);
-}
-
-/* Toggle PDF Button */
-.toggle-pdf-btn {
-    padding: 12px 20px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 0.9rem;
-    font-weight: 500;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    white-space: nowrap;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.toggle-pdf-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
-}
-
-/* PDF Viewer Container */
-.pdf-viewer-container {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease, padding 0.4s ease;
-    background: #f1f5f9;
-}
-
-.pdf-viewer-container.visible {
-    max-height: 700px;
-    padding: 20px;
-}
-
-.pdf-viewer {
-    width: 100%;
-    height: 600px;
-    border: none;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.video-viewer {
-    width: 100%;
-    height: 450px;
-    border: none;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Sub-documents (for projects with multiple PDFs) */
-.sub-document {
-    border-top: 1px solid var(--border);
-}
-
-.sub-document-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 30px;
-    gap: 20px;
-}
-
-.sub-document-info {
-    flex: 1;
-}
-
-.sub-document-info h3 {
-    color: var(--dark);
+.project-content h2 {
     font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--dark);
     margin-bottom: 6px;
 }
 
-.sub-document-info p {
-    color: var(--gray);
+.project-content p {
     font-size: 0.9rem;
+    color: var(--gray);
     line-height: 1.5;
+    margin-bottom: 10px;
 }
 
-.sub-document-actions {
+.project-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.tag {
+    font-size: 0.75rem;
+    color: var(--gray);
+    background: var(--light);
+    padding: 3px 10px;
+    border-radius: 12px;
+}
+
+/* Project Actions */
+.project-actions {
     display: flex;
     align-items: center;
     gap: 12px;
+    margin-left: 24px;
+    flex-shrink: 0;
 }
 
-.sub-document-actions a {
-    width: 40px;
-    height: 40px;
-    background: var(--light);
-    border-radius: 8px;
+.btn-link {
+    width: 36px;
+    height: 36px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--gray);
-    transition: all 0.3s;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    transition: all 0.2s;
+    text-decoration: none;
 }
 
-.sub-document-actions a:hover {
-    background: var(--primary);
-    color: white;
+.btn-link:hover {
+    color: var(--dark);
+    border-color: var(--dark);
 }
 
-.toggle-pdf-btn-small {
-    padding: 10px 16px;
-    background: var(--primary);
+.btn-view {
+    padding: 8px 16px;
+    background: var(--dark);
     color: white;
     border: none;
     border-radius: 6px;
     font-size: 0.85rem;
     font-weight: 500;
     cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-view:hover {
+    background: var(--primary);
+}
+
+/* Multiple Documents */
+.project-documents {
+    width: 100%;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+}
+
+.project-card:has(.project-documents) {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.document-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.document-row:not(:last-child) {
+    border-bottom: 1px solid var(--border);
+}
+
+.doc-title {
+    font-size: 0.9rem;
+    color: var(--dark);
+}
+
+.doc-actions {
     display: flex;
     align-items: center;
-    gap: 6px;
-    transition: background 0.3s;
+    gap: 10px;
 }
 
-.toggle-pdf-btn-small:hover {
-    background: var(--primary-dark);
+.btn-view-small {
+    padding: 6px 14px;
+    background: var(--dark);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
 }
 
-/* Skills Section */
+.btn-view-small:hover {
+    background: var(--primary);
+}
+
+/* ============================================
+   FULL-SCREEN VIEWER MODAL
+   ============================================ */
+
+.viewer-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.viewer-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.viewer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    background: var(--dark);
+    flex-shrink: 0;
+}
+
+.viewer-header h2 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    margin: 0;
+}
+
+.viewer-close {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+
+.viewer-close:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.viewer-body {
+    flex: 1;
+    padding: 0;
+    display: flex;
+}
+
+.viewer-body iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: white;
+}
+
+/* ============================================
+   SKILLS PAGE
+   ============================================ */
+
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -544,7 +585,10 @@ nav {
     transition: width 1s ease;
 }
 
-/* Contact Section */
+/* ============================================
+   CONTACT PAGE
+   ============================================ */
+
 .contact-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -667,7 +711,10 @@ nav {
     margin-right: 8px;
 }
 
-/* Footer */
+/* ============================================
+   FOOTER
+   ============================================ */
+
 footer {
     background: var(--dark);
     color: rgba(255, 255, 255, 0.6);
@@ -676,16 +723,27 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Responsive */
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
 @media (max-width: 768px) {
+    /* Navigation */
     .nav-links {
         display: none;
     }
 
+    /* Hero */
     .hero-content h1 {
         font-size: 2.5rem;
     }
 
+    /* Page titles */
+    .page-title {
+        font-size: 2rem;
+    }
+
+    /* About */
     .about-content {
         flex-direction: column;
         text-align: center;
@@ -700,46 +758,55 @@ footer {
         margin-left: 0;
     }
 
+    /* Projects */
+    .project-card {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .project-actions {
+        margin-left: 0;
+        margin-top: 16px;
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .btn-view {
+        flex: 1;
+        text-align: center;
+    }
+
+    .document-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .doc-actions {
+        width: 100%;
+    }
+
+    .btn-view-small {
+        flex: 1;
+        text-align: center;
+    }
+
+    .viewer-header h2 {
+        font-size: 0.9rem;
+    }
+
+    /* Skills */
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Contact */
     .contact-container {
         grid-template-columns: 1fr;
     }
 
     .contact-info {
-        grid-template-columns: 1fr;
-    }
-
-    .page-title {
-        font-size: 2rem;
-    }
-
-    .project-header {
-        flex-direction: column;
-    }
-
-    .toggle-pdf-btn {
-        width: 100%;
-        justify-content: center;
-    }
-
-    .sub-document-header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .sub-document-actions {
-        width: 100%;
-        justify-content: flex-end;
-    }
-
-    .pdf-viewer {
-        height: 400px;
-    }
-
-    .video-viewer {
-        height: 250px;
-    }
-
-    .skills-grid {
         grid-template-columns: 1fr;
     }
 }
