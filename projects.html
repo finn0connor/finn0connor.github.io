@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Your Name</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">YN</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="page-content">
+        <div class="container">
+            <h1 class="page-title">Projects</h1>
+            <p class="page-subtitle">A selection of my recent work in data science and energy analytics.</p>
+            
+            <!-- Filter Buttons -->
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="data-science">Data Science</button>
+                <button class="filter-btn" data-filter="energy">Energy Trading</button>
+                <button class="filter-btn" data-filter="analysis">Engineering Analysis</button>
+            </div>
+
+            <div class="projects-list">
+
+                <!-- Project 1 -->
+                <div class="project-item" data-category="data-science energy">
+                    <div class="project-header">
+                        <div class="project-title-section">
+                            <h2>Demand Forecasting Ensemble Model</h2>
+                            <p class="project-description">
+                                Ridge regression ensemble model combining multiple forecasts to improve electricity demand predictions. 
+                                This project developed a machine learning approach to blend external vendor forecasts with grid operator 
+                                predictions, achieving a 15% reduction in RMSE compared to individual forecasts.
+                            </p>
+                            <div class="project-tags">
+                                <span>Python</span>
+                                <span>scikit-learn</span>
+                                <span>Time Series</span>
+                                <span>Ridge Regression</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/yourusername/demand-forecasting" target="_blank">
+                                    <i class="fab fa-github"></i> View Code
+                                </a>
+                                <a href="docs/demand-forecasting-report.pdf" download>
+                                    <i class="fas fa-download"></i> Download PDF
+                                </a>
+                            </div>
+                        </div>
+                        <button class="toggle-pdf-btn" onclick="togglePdf('pdf-viewer-1')">
+                            <i class="fas fa-file-pdf"></i> View Report
+                        </button>
+                    </div>
+                    <div class="pdf-viewer-container" id="pdf-viewer-1">
+                        <iframe src="docs/demand-forecasting-report.pdf" class="pdf-viewer"></iframe>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-item" data-category="energy analysis">
+                    <div class="project-header">
+                        <div class="project-title-section">
+                            <h2>Energy Price Analysis</h2>
+                            <p class="project-description">
+                                Statistical analysis of wholesale electricity prices and their relationship with renewable generation. 
+                                Identified key patterns in price volatility during high wind periods and developed visualisations 
+                                to support trading decisions.
+                            </p>
+                            <div class="project-tags">
+                                <span>Python</span>
+                                <span>Pandas</span>
+                                <span>Statistical Analysis</span>
+                                <span>Visualisation</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/yourusername/energy-price-analysis" target="_blank">
+                                    <i class="fab fa-github"></i> View Code
+                                </a>
+                                <a href="docs/energy-price-analysis.pdf" download>
+                                    <i class="fas fa-download"></i> Download PDF
+                                </a>
+                            </div>
+                        </div>
+                        <button class="toggle-pdf-btn" onclick="togglePdf('pdf-viewer-2')">
+                            <i class="fas fa-file-pdf"></i> View Report
+                        </button>
+                    </div>
+                    <div class="pdf-viewer-container" id="pdf-viewer-2">
+                        <iframe src="docs/energy-price-analysis.pdf" class="pdf-viewer"></iframe>
+                    </div>
+                </div>
+
+                <!-- Project 3 - Multiple PDFs -->
+                <div class="project-item" data-category="energy">
+                    <div class="project-header">
+                        <div class="project-title-section">
+                            <h2>Energy Trading Internship - ElectroRoute</h2>
+                            <p class="project-description">
+                                As part of my Master's of Mechanical Engineering, I undertook an industrial placement internship 
+                                with ElectroRoute - an energy trading company. Below are some of the reports I submitted to my 
+                                university, detailing work carried out during my time there.
+                            </p>
+                            <div class="project-tags">
+                                <span>Python</span>
+                                <span>SQL</span>
+                                <span>Energy Markets</span>
+                                <span>Trading Operations</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Sub-document 1 -->
+                    <div class="sub-document">
+                        <div class="sub-document-header">
+                            <div class="sub-document-info">
+                                <h3>Goals and Objectives Report</h3>
+                                <p>This report outlines the scope of my internship at ElectroRoute and the objectives for the placement.</p>
+                            </div>
+                            <div class="sub-document-actions">
+                                <a href="docs/goals-objectives.pdf" download>
+                                    <i class="fas fa-download"></i>
+                                </a>
+                                <button class="toggle-pdf-btn-small" onclick="togglePdf('pdf-viewer-3a')">
+                                    <i class="fas fa-eye"></i> View
+                                </button>
+                            </div>
+                        </div>
+                        <div class="pdf-viewer-container" id="pdf-viewer-3a">
+                            <iframe src="docs/goals-objectives.pdf" class="pdf-viewer"></iframe>
+                        </div>
+                    </div>
+
+                    <!-- Sub-document 2 -->
+                    <div class="sub-document">
+                        <div class="sub-document-header">
+                            <div class="sub-document-info">
+                                <h3>Interim Report</h3>
+                                <p>Interim report describing the analytical tools and projects undertaken during the internship, 
+                                   including KPI development, backtesting trading strategies, and weather analysis.</p>
+                            </div>
+                            <div class="sub-document-actions">
+                                <a href="docs/interim-report.pdf" download>
+                                    <i class="fas fa-download"></i>
+                                </a>
+                                <button class="toggle-pdf-btn-small" onclick="togglePdf('pdf-viewer-3b')">
+                                    <i class="fas fa-eye"></i> View
+                                </button>
+                            </div>
+                        </div>
+                        <div class="pdf-viewer-container" id="pdf-viewer-3b">
+                            <iframe src="docs/interim-report.pdf" class="pdf-viewer"></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-item" data-category="data-science">
+                    <div class="project-header">
+                        <div class="project-title-section">
+                            <h2>Wind Power Forecasting</h2>
+                            <p class="project-description">
+                                Machine learning model for predicting wind farm output using weather data. Implemented feature 
+                                engineering and hyperparameter tuning to optimise performance, achieving strong accuracy on 
+                                day-ahead predictions.
+                            </p>
+                            <div class="project-tags">
+                                <span>Python</span>
+                                <span>XGBoost</span>
+                                <span>Weather Data</span>
+                                <span>Feature Engineering</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/yourusername/wind-forecasting" target="_blank">
+                                    <i class="fab fa-github"></i> View Code
+                                </a>
+                                <a href="docs/wind-forecasting-report.pdf" download>
+                                    <i class="fas fa-download"></i> Download PDF
+                                </a>
+                            </div>
+                        </div>
+                        <button class="toggle-pdf-btn" onclick="togglePdf('pdf-viewer-4')">
+                            <i class="fas fa-file-pdf"></i> View Report
+                        </button>
+                    </div>
+                    <div class="pdf-viewer-container" id="pdf-viewer-4">
+                        <iframe src="docs/wind-forecasting-report.pdf" class="pdf-viewer"></iframe>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-item" data-category="analysis">
+                    <div class="project-header">
+                        <div class="project-title-section">
+                            <h2>CFD Analysis of a NACA3412 Aerofoil</h2>
+                            <p class="project-description">
+                                Conducted CFD simulations of a NACA3412 aerofoil with and without a flap using ANSYS Fluent. 
+                                Compared lift coefficients and aerodynamic behaviour across multiple aerofoil configurations.
+                            </p>
+                            <div class="project-tags">
+                                <span>ANSYS Fluent</span>
+                                <span>CFD</span>
+                                <span>Aerodynamics</span>
+                                <span>MATLAB</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="docs/cfd-aerofoil-report.pdf" download>
+                                    <i class="fas fa-download"></i> Download PDF
+                                </a>
+                            </div>
+                        </div>
+                        <button class="toggle-pdf-btn" onclick="togglePdf('pdf-viewer-5')">
+                            <i class="fas fa-file-pdf"></i> View Report
+                        </button>
+                    </div>
+                    <div class="pdf-viewer-container" id="pdf-viewer-5">
+                        <iframe src="docs/cfd-aerofoil-report.pdf" class="pdf-viewer"></iframe>
+                    </div>
+                </div>
+
+                <!-- Project 6 - Video -->
+                <div class="project-item" data-category="energy">
+                    <div class="project-header">
+                        <div class="project-title-section">
+                            <h2>Energy Systems and Sustainability Discussion</h2>
+                            <p class="project-description">
+                                Discussion on sustainable energy systems and engineering innovation. Presented insights into 
+                                modern energy system design and the transition to renewable energy sources.
+                            </p>
+                            <div class="project-tags">
+                                <span>Energy</span>
+                                <span>Sustainability</span>
+                                <span>Presentation</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://www.youtube.com/watch?v=YMPw99gwM_k" target="_blank">
+                                    <i class="fab fa-youtube"></i> Watch Video
+                                </a>
+                            </div>
+                        </div>
+                        <button class="toggle-pdf-btn" onclick="togglePdf('video-viewer-6')">
+                            <i class="fas fa-play"></i> View Video
+                        </button>
+                    </div>
+                    <div class="pdf-viewer-container" id="video-viewer-6">
+                        <iframe 
+                            src="https://www.youtube.com/embed/YMPw99gwM_k" 
+                            class="video-viewer"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Your Name. Built with GitHub Pages.</p>
+    </footer>
+
+    <script>
+        // Toggle PDF viewer visibility
+        function togglePdf(id) {
+            const viewer = document.getElementById(id);
+            const isVisible = viewer.classList.contains('visible');
+            
+            // Close all other viewers
+            document.querySelectorAll('.pdf-viewer-container').forEach(v => {
+                v.classList.remove('visible');
+            });
+            
+            // Toggle the clicked viewer
+            if (!isVisible) {
+                viewer.classList.add('visible');
+            }
+        }
+
+        // Filter functionality
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active button
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                const filter = btn.dataset.filter;
+                
+                document.querySelectorAll('.project-item').forEach(item => {
+                    if (filter === 'all' || item.dataset.category.includes(filter)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
