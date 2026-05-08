@@ -1645,3 +1645,275 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+/* ============================================
+   ABOUT PAGE - ENHANCED STYLING
+   ============================================ */
+
+.inner-page .about-content {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 60px;
+    align-items: start;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about-sidebar {
+    position: sticky;
+    top: 100px;
+}
+
+.inner-page .profile-photo {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    border-radius: 16px;
+    object-fit: cover;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    margin-bottom: 24px;
+}
+
+.about-quick-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+}
+
+.quick-info-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.9rem;
+    color: var(--gray);
+}
+
+.quick-info-item i {
+    width: 18px;
+    color: var(--accent);
+    font-size: 0.9rem;
+}
+
+.about-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.inner-page .cv-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 24px;
+    background: var(--dark);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.2s;
+    margin-top: 0;
+}
+
+.inner-page .cv-button:hover {
+    background: var(--accent);
+    transform: translateY(-2px);
+}
+
+.inner-page .cv-button.secondary {
+    background: white;
+    color: var(--dark);
+    border: 1px solid var(--border);
+}
+
+.inner-page .cv-button.secondary:hover {
+    background: var(--dark);
+    color: white;
+    border-color: var(--dark);
+}
+
+.about-intro {
+    font-size: 1.15rem;
+    color: var(--dark);
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.inner-page .about-text > p {
+    font-size: 1rem;
+    color: var(--gray);
+    line-height: 1.8;
+    margin-bottom: 16px;
+}
+
+.inner-page .about-text h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--dark);
+    margin-top: 48px;
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--border);
+}
+
+.timeline-grade {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--accent);
+    background: rgba(59, 130, 246, 0.1);
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 8px;
+}
+
+/* Certifications */
+.certifications-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.cert-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 20px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    font-size: 0.9rem;
+    color: var(--dark);
+    transition: all 0.2s;
+}
+
+.cert-item:hover {
+    border-color: var(--accent);
+    box-shadow: 0 2px 12px rgba(59, 130, 246, 0.1);
+}
+
+.cert-item i {
+    color: var(--accent);
+    font-size: 1rem;
+}
+
+/* Achievements */
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.achievement-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    transition: all 0.2s;
+}
+
+.achievement-item:hover {
+    border-color: var(--accent);
+    box-shadow: 0 2px 12px rgba(59, 130, 246, 0.1);
+}
+
+.achievement-item i {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(59, 130, 246, 0.1);
+    color: var(--accent);
+    border-radius: 10px;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.achievement-item h4 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 4px;
+}
+
+.achievement-item p {
+    font-size: 0.85rem;
+    color: var(--gray);
+    margin: 0;
+}
+
+.interests-text {
+    font-size: 0.95rem;
+    color: var(--gray);
+    line-height: 1.7;
+    padding: 20px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+}
+
+.interests-text strong {
+    color: var(--dark);
+}
+
+/* ============================================
+   RESPONSIVE - ABOUT PAGE
+   ============================================ */
+
+@media (max-width: 900px) {
+    .inner-page .about-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .about-sidebar {
+        position: static;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .inner-page .profile-photo {
+        width: 220px;
+    }
+
+    .about-quick-info {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .about-links {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .certifications-list {
+        grid-template-columns: 1fr;
+    }
+
+    .achievements-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .inner-page .about-text h2 {
+        margin-top: 36px;
+        margin-bottom: 20px;
+    }
+
+    .about-intro {
+        font-size: 1.05rem;
+    }
+}
