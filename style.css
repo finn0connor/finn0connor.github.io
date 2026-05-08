@@ -242,45 +242,80 @@ nav {
     font-size: 0.95rem;
 }
 
-/* Projects Section */
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+/* Project Filters */
+.filter-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    background: white;
+    border: 2px solid var(--border);
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--gray);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.filter-btn:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.filter-btn.active {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: white;
+}
+
+/* Projects List */
+.projects-list {
+    display: flex;
+    flex-direction: column;
     gap: 30px;
 }
 
-.project-card {
+.project-item {
     background: white;
-    border-radius: 10px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: box-shadow 0.3s;
 }
 
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+.project-item:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
 
-.project-image img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 30px;
+    gap: 20px;
 }
 
-.project-info {
-    padding: 25px;
+.project-title-section {
+    flex: 1;
 }
 
-.project-info h3 {
-    margin-bottom: 10px;
+.project-title-section h2 {
     color: var(--dark);
+    font-size: 1.4rem;
+    margin-bottom: 12px;
 }
 
-.project-info p {
+.project-description {
     color: var(--gray);
+    font-size: 1rem;
+    line-height: 1.7;
     margin-bottom: 15px;
-    font-size: 0.95rem;
 }
 
 .project-tags {
@@ -299,25 +334,147 @@ nav {
     font-weight: 500;
 }
 
-.project-links {
+.project-item .project-links {
     display: flex;
-    gap: 15px;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-.project-links a {
+.project-item .project-links a {
     color: var(--primary);
     text-decoration: none;
     font-weight: 500;
     font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
     transition: color 0.3s;
 }
 
-.project-links a:hover {
+.project-item .project-links a:hover {
     color: var(--primary-dark);
 }
 
-.project-links i {
-    margin-right: 5px;
+/* Toggle PDF Button */
+.toggle-pdf-btn {
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.toggle-pdf-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+}
+
+/* PDF Viewer Container */
+.pdf-viewer-container {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    background: #f1f5f9;
+}
+
+.pdf-viewer-container.visible {
+    max-height: 700px;
+    padding: 20px;
+}
+
+.pdf-viewer {
+    width: 100%;
+    height: 600px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.video-viewer {
+    width: 100%;
+    height: 450px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Sub-documents (for projects with multiple PDFs) */
+.sub-document {
+    border-top: 1px solid var(--border);
+}
+
+.sub-document-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    gap: 20px;
+}
+
+.sub-document-info {
+    flex: 1;
+}
+
+.sub-document-info h3 {
+    color: var(--dark);
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+}
+
+.sub-document-info p {
+    color: var(--gray);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.sub-document-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.sub-document-actions a {
+    width: 40px;
+    height: 40px;
+    background: var(--light);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gray);
+    transition: all 0.3s;
+}
+
+.sub-document-actions a:hover {
+    background: var(--primary);
+    color: white;
+}
+
+.toggle-pdf-btn-small {
+    padding: 10px 16px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: background 0.3s;
+}
+
+.toggle-pdf-btn-small:hover {
+    background: var(--primary-dark);
 }
 
 /* Skills Section */
@@ -553,5 +710,36 @@ footer {
 
     .page-title {
         font-size: 2rem;
+    }
+
+    .project-header {
+        flex-direction: column;
+    }
+
+    .toggle-pdf-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .sub-document-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .sub-document-actions {
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    .pdf-viewer {
+        height: 400px;
+    }
+
+    .video-viewer {
+        height: 250px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
     }
 }
