@@ -899,3 +899,67 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+/* ============================================
+   PROJECT BULLETS
+   ============================================ */
+
+.project-bullets {
+    margin: 12px 0 16px 0;
+    padding-left: 20px;
+    list-style: disc;
+}
+
+.project-bullets li {
+    font-size: 0.9rem;
+    color: var(--gray);
+    line-height: 1.6;
+    margin-bottom: 6px;
+}
+
+.project-bullets li:last-child {
+    margin-bottom: 0;
+}
+
+/* ============================================
+   DOCUMENT ROW WITH DESCRIPTION
+   ============================================ */
+
+.document-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 0;
+}
+
+.document-row:not(:last-child) {
+    border-bottom: 1px solid var(--border);
+}
+
+.doc-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.doc-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--dark);
+    display: block;
+    margin-bottom: 4px;
+}
+
+.doc-description {
+    font-size: 0.85rem;
+    color: var(--gray);
+    line-height: 1.5;
+    margin: 0;
+}
+
+.doc-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 20px;
+    flex-shrink: 0;
+}
