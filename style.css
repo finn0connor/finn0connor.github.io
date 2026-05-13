@@ -1399,6 +1399,23 @@ body {
 .cert-status.pending {
     background: rgba(234, 179, 8, 0.1);
     color: #ca8a04;
+    
+    display: inline-flex;
+    align-items: center;
+    gap: 6px; 
+}
+
+.cert-status.pending i {
+    animation: certSpinner 1.2s linear infinite;
+}
+
+@keyframes certSpinner {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .cert-section-body {
