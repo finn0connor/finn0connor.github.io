@@ -1399,10 +1399,9 @@ body {
 .cert-status.pending {
     background: rgba(234, 179, 8, 0.1);
     color: #ca8a04;
-    
     display: inline-flex;
     align-items: center;
-    gap: 6px; 
+    gap: 6px;
 }
 
 .cert-status.pending i {
@@ -1427,6 +1426,7 @@ body {
     font-weight: 600;
     color: var(--dark);
     margin-bottom: 16px;
+    text-align: center;
 }
 
 .cert-table-wrapper {
@@ -1447,7 +1447,7 @@ body {
 
 .cert-table th {
     padding: 12px 20px;
-    text-align: left;
+    text-align: center;
     font-size: 0.8rem;
     font-weight: 600;
     color: var(--gray);
@@ -1460,6 +1460,7 @@ body {
     padding: 14px 20px;
     color: var(--dark);
     border-bottom: 1px solid var(--border);
+    text-align: center;
 }
 
 .cert-table tbody tr:last-child td {
@@ -1491,8 +1492,9 @@ body {
 }
 
 .cert-final {
-    display: inline-flex;
+    display: flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
     margin-top: 20px;
     padding: 14px 20px;
@@ -1511,12 +1513,14 @@ body {
 .cert-image-block {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 16px;
 }
 
 .cert-image-actions {
     display: flex;
     gap: 12px;
+    justify-content: center;
 }
 
 .cert-view-btn {
@@ -1543,6 +1547,7 @@ body {
     border-radius: 10px;
     overflow: hidden;
     max-width: 700px;
+    margin: 0 auto;
 }
 
 .cert-image {
