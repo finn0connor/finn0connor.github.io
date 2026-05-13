@@ -437,14 +437,30 @@
     </footer>
 
     <script>
-        // Open PDF viewer
+        // Detect if user is on mobile device
+        function isMobileDevice() {
+            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth <= 768;
+        }
+
+        // Open PDF viewer (or download on mobile)
         function openViewer(pdfUrl, title) {
-            document.getElementById('viewer-title').textContent = title;
-            document.getElementById('viewer-frame').src = pdfUrl;
-            document.getElementById('viewer-download').href = pdfUrl;
-            document.getElementById('viewer-download').style.display = 'flex';
-            document.getElementById('viewer-modal').classList.add('active');
-            document.body.style.overflow = 'hidden';
+            if (isMobileDevice()) {
+                // On mobile, trigger download instead
+                const link = document.createElement('a');
+                link.href = pdfUrl;
+                link.download = pdfUrl.split('/').pop(); // Extract filename from URL
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            } else {
+                // On desktop, open viewer
+                document.getElementById('viewer-title').textContent = title;
+                document.getElementById('viewer-frame').src = pdfUrl;
+                document.getElementById('viewer-download').href = pdfUrl;
+                document.getElementById('viewer-download').style.display = 'flex';
+                document.getElementById('viewer-modal').classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
         }
 
         // Open video viewer
@@ -484,6 +500,26 @@
                     }
                 });
             });
+        });
+
+        // Update button text on mobile to say "Download" instead of "View"
+        document.addEventListener('DOMContentLoaded', () => {
+            if (isMobileDevice()) {
+                document.querySelectorAll('.btn-view').forEach(btn => {
+                    if (btn.textContent.trim() === 'View Report') {
+                        btn.innerHTML = '<i class="fas fa-download"></i> Download Report';
+                    } else if (btn.textContent.trim() === 'Watch Video') {
+                        // Keep video buttons as "Watch Video"
+                        return;
+                    }
+                });
+                
+                document.querySelectorAll('.btn-view-small').forEach(btn => {
+                    if (btn.textContent.trim() === 'View') {
+                        btn.innerHTML = '<i class="fas fa-download"></i> Download';
+                    }
+                });
+            }
         });
     </script>
 </body>
