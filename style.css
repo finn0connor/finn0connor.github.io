@@ -1666,18 +1666,34 @@ footer {
 }
 
 @media (max-width: 768px) {
-    /* Navigation */
+
+    /* ── Navigation fix ── */
     .inner-nav {
-        padding: 16px 20px;
+        padding: 12px 16px;
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
     }
 
     .inner-nav .nav-logo {
         position: static;
+        font-size: 1.1rem;
+        text-align: center;
     }
 
     .nav-menu-center {
-        display: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 4px 16px;
+        width: 100%;
     }
+
+    .nav-menu-center a {
+        font-size: 0.85rem;
+        padding: 6px 0;
+    }
+    /* ── End navigation fix ── */
 
     /* Home Page */
     .home-page .home-content-wrapper {
