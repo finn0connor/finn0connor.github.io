@@ -96,6 +96,32 @@
                     </div>
                 </article>
 
+                <!--IE-GB Interconnector Flow Prediction Model (XGBoost)-->
+                <article class="project-card" data-category="energy">
+                    <div class="project-content">
+                        <h2>IE-GB Interconnector Flow Prediction Model (XGBoost)</h2>
+                        <p>XGBoost model for forecasting net IE-GB interconnector flow at 30-minute resolution. Features day-ahead market prices from EPEX GB and SEMOpx, wind and demand forecasts, price spread metrics and lagged flow history. 
+                            Hyperparameters were tuned via Optuna. Used daily by the trading desk to inform predict interconnector flows at day-ahead and intraday, run post-14:00 once both day-ahead auctions have cleared.
+                            Achieved a R² value of 0.4832. This is a work in progress, and I would like to fine tune the model in the future.
+                        </p>
+                        <div class="project-meta">
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">European Power</span>
+                            <span class="tag">XGBoost</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">SQL</span>
+                        </div>
+                    </div>
+                    <div class="project-actions">
+                        <a href="docs/interconnector_flows.pdf" download class="btn-link" title="Download PDF">
+                            <i class="fas fa-download"></i>
+                        </a>
+                        <button class="btn-view" onclick="openViewer('docs/interconnector_flows.pdf', 'IE-GB Interconnector Flow Prediction Model (XGBoost)">
+                            View
+                        </button>
+                    </div>
+                </article>
+
                 <!--Development of an Acoustic Liner for UAV Applications-->
                 <article class="project-card" data-category="analysis">
                     <div class="project-content">
