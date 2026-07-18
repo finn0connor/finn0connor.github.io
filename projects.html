@@ -100,10 +100,12 @@
                 <article class="project-card" data-category="energy">
                     <div class="project-content">
                         <h2>IE-GB Interconnector Flow Prediction Model (XGBoost)</h2>
-                        <p>XGBoost model for forecasting net IE-GB interconnector flow at 30-minute resolution. Features day-ahead market prices from EPEX GB and SEMOpx, wind and demand forecasts, price spread metrics and lagged flow history. 
-                            Hyperparameters were tuned via Optuna. Used daily by the trading desk to inform predict interconnector flows at day-ahead and intraday, run post-14:00 once both day-ahead auctions have cleared.
-                            Achieved a R² value of 0.4832. This is a work in progress, and I would like to fine tune the model in the future.
-                        </p>
+                        <p>XGBoost model for forecasting net IE-GB interconnector flow at 30-minute resolution. This is a work in progress, and I would like to fine tune the model in the future to better predict sharp swings and movements.</p>
+                        <ul class="project-bullets">
+                            <li>Features day-ahead market prices from EPEX GB and SEMOpx, wind and demand forecasts, price spread metrics and lagged flow history.</li>
+                            <li>Hyperparameters were tuned via Optuna.</li>
+                            <li>Achieved a R² value of 0.4822, MAE of 257.74 MW, and RMSE of 343.26 MW.</li>
+                        </ul>
                         <div class="project-meta">
                             <span class="tag">Machine Learning</span>
                             <span class="tag">European Power</span>
