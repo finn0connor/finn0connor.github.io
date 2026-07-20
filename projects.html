@@ -40,14 +40,14 @@
                 <article class="project-card" data-category="energy">
                     <div class="project-content">
                         <h2>Energy Trading Internship: ElectroRoute</h2>
-                        <p>As part of my degree I completed a 7-month long internship with ElectroRoute, an international energy trading company. I worked on the Trading Operations Desk, where I assisted traders with analysis and built models using Python and SQL.</p>
+                        <p>As part of my degree, I completed a seven-month internship with ElectroRoute, an international energy trading company. I worked on the Trading Operations Desk, where I assisted traders with analysis and built models using Python and SQL.</p>
                         <ul class="project-bullets">
                             <li>Developed automated KPI tracking scripts using Python and SQL</li>
                             <li>Backtested trading strategies using historical market data</li>
                             <li>Built machine learning models for demand forecasting</li>
                             <li>Conducted weather and market analysis to support trading decisions</li>
                         </ul>
-                        <p>The following reports were completed in partial fulfilment of my degree, and were a university requirement.</p>
+                        <p>The following reports were completed in partial fulfilment of my degree and were a university requirement.</p>
                         <div class="project-meta">
                             <span class="tag">Python</span>
                             <span class="tag">SQL</span>
@@ -59,8 +59,8 @@
                         <div class="document-row">
                             <div class="doc-info">
                                 <h3 class="doc-title">Final Report</h3>
-                                <p class="doc-description">Comprehensive summary of work completed during the placement, including KPI dashboard, solar
-                                trading strategy analysis, and ML demand forecasting ensemble.</p>
+                                <p class="doc-description">Comprehensive summary of work completed during the placement, including the KPI dashboard,
+                                solar trading strategy analysis, and ML demand forecasting ensemble.</p>
                             </div>
                             <div class="doc-actions">
                                 <a href="docs/final-report-finn-oconnor.pdf" download class="btn-link" title="Download PDF">
@@ -72,7 +72,7 @@
                         <div class="document-row">
                             <div class="doc-info">
                                 <h3 class="doc-title">Interim Report</h3>
-                                <p class="doc-description">Overview of the progress that was made half way through the internship.</p>
+                                <p class="doc-description">Overview of the progress made halfway through the internship.</p>
                             </div>
                             <div class="doc-actions">
                                 <a href="docs/interim-report-finn-oconnor.pdf" download class="btn-link" title="Download PDF">
@@ -96,15 +96,64 @@
                     </div>
                 </article>
 
+                <!--Energy Trading KPI Dashboard-->
+                <article class="project-card" data-category="energy">
+                    <div class="project-content">
+                        <h2>Energy Trading KPI Dashboard</h2>
+                        <p>During my time at ElectroRoute, I built a full-stack, server-hosted dashboard using Python, SQL, HTML, and Flask to monitor trading desk and market performance.</p>
+                        <ul class="project-bullets">
+                            <li>The dashboard was used across the entire company and was available to everyone via a network server</li>
+                            <li>Gave insight into desk performance metrics such as PnL, generation, curtailment, price volatility, MCV, and position analysis, among others</li>
+                            <li>Created a trader leaderboard for IDA1/2/3 and IDC trading, enabling traders to compare results with one another and improve performance</li>
+                            <li>Added a market analysis tab, giving live statistics on power demand, prices, and interconnector flows</li>
+                            <li>Structured the code in a clear and interpretable way, and also wrote documentation to ensure that the dashboard could be maintained after internship completion</li>
+                        </ul>
+                        <div class="project-meta">
+                            <span class="tag">Python</span>
+                            <span class="tag">SQL</span>
+                            <span class="tag">Flask</span>
+                            <span class="tag">HTML</span>
+                            <span class="tag">Software Engineering</span>
+                            <span class="tag">Power Markets</span>
+                        </div>
+                    </div>
+                    <div class="project-documents">
+                        <div class="document-row">
+                            <div class="doc-info">
+                                <h3 class="doc-title">Energy Trading KPI Dashboard (Redacted)</h3>
+                                <p class="doc-description">A full printout of the dashboard and its contents. To preserve confidential client and company data, sensitive details and figures were redacted.</p>
+                            </div>
+                            <div class="doc-actions">
+                                <a href="docs/final-report-finn-oconnor.pdf" download class="btn-link" title="Download PDF">
+                                    <i class="fas fa-download"></i>
+                                </a>
+                                <button class="btn-view-small" onclick="openViewer('docs/final-report-finn-oconnor.pdf', 'Final Report')">View</button>
+                            </div>
+                        </div>
+                        <div class="document-row">
+                            <div class="doc-info">
+                                <h3 class="doc-title">KPI Dashboard README Documentation (Redacted)</h3>
+                                <p class="doc-description">Markdown file detailing the dashboard architecture that I produced to ensure dashboard maintainability. Once again, redacted.</p>
+                            </div>
+                            <div class="doc-actions">
+                                <a href="docs/READ_ME_redacted" download class="btn-link" title="Download PDF">
+                                    <i class="fas fa-download"></i>
+                                </a>
+                                <button class="btn-view-small" onclick="openViewer('docs/READ_ME_redacted.pdf', 'Interim Report')">View</button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
                 <!--IE-GB Interconnector Flow Prediction Model (XGBoost)-->
                 <article class="project-card" data-category="energy">
                     <div class="project-content">
                         <h2>IE-GB Interconnector Flow Prediction Model (XGBoost)</h2>
-                        <p>XGBoost model for forecasting net IE-GB interconnector flow at 30-minute resolution. This is a work in progress, and I would like to fine tune the model in the future to better predict sharp swings and movements.</p>
+                        <p>XGBoost model for forecasting net IE-GB interconnector flow at 30-minute resolution. This is a work in progress, and I would like to fine-tune the model in the future to better predict sharp swings and movements.</p>
                         <ul class="project-bullets">
-                            <li>Features day-ahead market prices from EPEX GB and SEMOpx, wind and demand forecasts, price spread metrics and lagged flow history.</li>
+                            <li>Features day-ahead market prices from EPEX GB and SEMOpx, wind and demand forecasts, price spread metrics, and lagged flow history.</li>
                             <li>Hyperparameters were tuned via Optuna.</li>
-                            <li>Achieved a R² value of 0.4822, MAE of 257.74 MW, and RMSE of 343.26 MW.</li>
+                            <li>Achieved an R² value of 0.4822, MAE of 257.74 MW, and RMSE of 343.26 MW.</li>
                         </ul>
                         <div class="project-meta">
                             <span class="tag">Machine Learning</span>
@@ -122,11 +171,37 @@
                     </div>
                 </article>
 
+                <!--Solar Book Analysis and Strategy Backtesting-->
+                <article class="project-card" data-category="energy">
+                    <div class="project-content">
+                        <h2>Solar Book Analysis and Strategy Backtesting (Redacted)</h2>
+                        <p>In the early months of my internship with ElectroRoute, I was tasked with conducting analysis on our solar book and suggesting new approaches to trading volumes.</p>
+                        <ul class="project-bullets">
+                            <li>Conducted statistical analysis on forecast accuracy and investigated individual site dispatch-down.</li>
+                            <li>Hypothesised simple auction-based trading strategies and backtested them against historic performance.</li>
+                            <li>Proposed a systematic framework to predict the best auction split for a given trading day.</li>
+                        </ul>
+                        <div class="project-meta">
+                            <span class="tag">Statistics</span>
+                            <span class="tag">Solar Trading</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">SQL</span>
+                            <span class="tag">Presentations</span>
+                        </div>
+                    </div>
+                    <div class="project-actions">
+                        <a href="docs/solar_analysis_redacted_PDF.pdf" download class="btn-link" title="Download PDF">
+                            <i class="fas fa-download"></i>
+                        </a>
+                        <button class="btn-view" onclick="openViewer('docs/solar_analysis_redacted_PDF.pdf', 'IE-GB Interconnector Flow Prediction Model (XGBoost)')">View</button>
+                    </div>
+                </article>
+
                 <!--Development of an Acoustic Liner for UAV Applications-->
                 <article class="project-card" data-category="analysis">
                     <div class="project-content">
                         <h2>Development of an Acoustic Liner for UAV Applications</h2>
-                        <p>As part of a module called 'Research Methods', we were tasked with conducting research into the development of acoustic liners to reduce noise pollutions in drones.</p>
+                        <p>As part of a module called "Research Methods," we were tasked with conducting research into the development of acoustic liners to reduce noise pollution in drones.</p>
                         <ul class="project-bullets">
                             <li>Analysed research papers, simulated liner performance in MATLAB, and modelled 3D prototypes in SolidWorks.</li>
                             <li>Presented findings in front of the entire class.</li>
@@ -205,7 +280,7 @@
                             <div class="doc-info">
                                 <h3 class="doc-title">Research & Innovation Showcase 2026</h3>
                                 <p class="doc-description">Selected to represent the Mechanical Engineering Class of 2027 at the Research and Innovation
-                                Showcase 2026, held by the Trinity School of Engineering. Presented a poster and slideshow, showcasing our work on the optimisation of
+                                Showcase 2026, held by the Trinity School of Engineering. Presented a poster and slideshow showcasing our work on the optimisation of
                                 a smartphone chassis using FEA (report accessible in the tab below).</p>
                             </div>
                             <div class="doc-actions">
@@ -312,7 +387,7 @@
                     <div class="project-content">
                         <h2>The Development of Flexi-Wings in Formula 1</h2>
                         <p>Conducted research on the development of flexi-wings and assessed the controversy behind them in Formula 1.
-                        Investigated how carbon fibre composites are manufactured, their feasability, and even conducted a CFD simulation to assess wing performance.</p>
+                        Investigated how carbon fibre composites are manufactured and their feasibility, and even conducted a CFD simulation to assess wing performance.</p>
                         <div class="project-meta">
                             <span class="tag">Materials Science</span>
                             <span class="tag">Manufacturing Systems</span>
@@ -334,7 +409,7 @@
                 <article class="project-card" data-category="analysis">
                     <div class="project-content">
                         <h2>Kinematic Analysis of a Four-Bar Linkage Pumpjack System</h2>
-                        <p>Simulated the kinematics a four-bar linkage pumpjack system using MATLAB. Solved for position, acceleration, and velocity at each point of the cycle by applying knowldedge of classical mechanics.</p>
+                        <p>Simulated the kinematics of a four-bar linkage pumpjack system using MATLAB. Solved for position, acceleration, and velocity at each point of the cycle by applying knowledge of classical mechanics.</p>
                         <div class="project-meta">
                             <span class="tag">Classical Mechanics</span>
                             <span class="tag">MATLAB</span>
@@ -355,7 +430,7 @@
                 <article class="project-card" data-category="analysis">
                     <div class="project-content">
                         <h2>Autonomous Driving Buggy Development</h2>
-                        <p>Built a autonomous buggy using an Arduino, a HuskyLens AI camera, and a PID controller. Please see the video to learn more about what we did.</p>
+                        <p>Built an autonomous buggy using an Arduino, a HuskyLens AI camera, and a PID controller. Please see the video to learn more about what we did.</p>
                         <div class="project-meta">
                             <span class="tag">Electronics</span>
                             <span class="tag">C++</span>
@@ -372,7 +447,7 @@
                 <article class="project-card" data-category="analysis">
                     <div class="project-content">
                         <h2>Thermodynamics and Heat Transfer Lab Experimentation</h2>
-                        <p>Lab assignments in thermodynamics and heat transfer analysis. Explores the granular thermodynamic processes behind a refrigerator and heat exchanger.</p>
+                        <p>Lab assignments in thermodynamics and heat transfer analysis, exploring the granular thermodynamic processes behind a refrigerator and a heat exchanger.</p>
                         <div class="project-meta">
                             <span class="tag">Thermodynamics</span>
                             <span class="tag">Heat Transfer</span>
@@ -396,7 +471,7 @@
                             <div class="doc-info">
                                 <h3 class="doc-title">Experimental Analysis of a Heat Exchanger</h3>
                                 <p class="doc-description">Analysed the heat transfer and thermodynamics of a cross-flow heat exchanger using the logarithmic mean temperature difference (LMTD) approach.
-                                    Calculated the system's percentage heat loss, the overall heat transfer coefficients, and uncertainty.</p>
+                                    Calculated the system's percentage heat loss, overall heat transfer coefficients, and uncertainty.</p>
                             </div>
                             <div class="doc-actions">
                                 <a href="docs/4B4_Heat_Exchanger_Lab_Report_Mech-14.pdf" download class="btn-link" title="Download PDF">
