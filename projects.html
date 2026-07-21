@@ -40,12 +40,14 @@
                 <article class="project-card" data-category="energy">
                     <div class="project-content">
                         <h2>Energy Trading Internship: ElectroRoute</h2>
-                        <p>As part of my degree, I completed a seven-month internship with ElectroRoute, an international energy trading company. I worked on the Trading Operations Desk, where I assisted traders with analysis and built models using Python and SQL. The following reports were completed in partial fulfilment of my degree and were a university requirement.</p>
+                        <p>As part of my Mechanical Engineering degree, I completed a seven-month internship with ElectroRoute, an international energy trading company. 
+                            Working on the Trading Operations Desk, I supported traders through market analysis, automation, and data-driven modelling using Python and SQL. 
+                            The reports below were completed in partial fulfilment of my degree and provide a comprehensive summary of the projects, responsibilities, and technical work undertaken during my internship up to May 2026.</p>
                         <ul class="project-bullets">
-                            <li>Developed automated KPI tracking scripts using Python and SQL.</li>
-                            <li>Backtested trading strategies using historical market data.</li>
-                            <li>Built models for demand forecasting.</li>
-                            <li>Conducted weather and market analysis to support trading decisions.</li>
+                            <li>Overview of the Trading Operations Desk and day-to-day responsibilities.</li>
+                            <li>Summaries of technical projects, analytical work, and process improvements completed during the internship.</li>
+                            <li>Discussion of the methodologies, tools, and technologies used, including Python, SQL, and data analysis techniques.</li>
+                            <li>Reflection on key outcomes, skills developed, and lessons learned throughout the placement.</li>
                         </ul>
                         <div class="project-meta">
                             <span class="tag">Python</span>
@@ -66,13 +68,13 @@
                 <article class="project-card" data-category="energy">
                     <div class="project-content">
                         <h2>Energy Trading KPI Dashboard</h2>
-                        <p>During my time at ElectroRoute, I built a full-stack, server-hosted dashboard using Python, SQL, HTML, and Flask to monitor trading desk and market performance.</p>
+                        <p>During my internship at ElectroRoute, I designed and developed a full-stack, server-hosted analytics dashboard using Python, Flask, SQL, HTML, CSS, and JavaScript to monitor trading desk performance and provide real-time market intelligence for the Trading Operations team.</p>
                         <ul class="project-bullets">
-                            <li>The dashboard was used across the entire company and was available to everyone via a network server</li>
-                            <li>Gave insight into desk performance metrics such as PnL, generation, curtailment, price volatility, MCV, and position analysis, among others</li>
-                            <li>Created a trader leaderboard for IDA1/2/3 and IDC trading, enabling traders to compare results with one another and improve performance</li>
-                            <li>Added a market analysis tab, giving live statistics on power demand, prices, and interconnector flows</li>
-                            <li>Structured the code in a clear and interpretable way, and also wrote documentation to ensure that the dashboard could be maintained after internship completion</li>
+                            <li>Developed and deployed the application on the company's internal network, providing organisation-wide access through a centrally hosted web server.</li>
+                            <li>Integrated SQL databases and automated data pipelines to deliver interactive visualisations and KPIs, including P&amp;L, generation, curtailment, market volatility, MCV, balancing costs, forecast accuracy, and trading position analysis.</li>
+                            <li>Designed a trader performance leaderboard covering IDA1, IDA2, IDA3, and Intraday Continuous (IDC) markets, enabling benchmarking and encouraging continuous performance improvement.</li>
+                            <li>Implemented a live market analytics module displaying key power market indicators such as system demand, wholesale electricity prices, renewable generation, and interconnector flows to support operational decision-making.</li>
+                            <li>Engineered the application with a modular, maintainable architecture and produced comprehensive technical documentation to support future development and long-term maintainability.</li>
                         </ul>
                         <div class="project-meta">
                             <span class="tag">Python</span>
@@ -90,10 +92,10 @@
                                 <p class="doc-description">A full printout of the dashboard and its contents. To preserve confidential client and company data, sensitive details and figures were redacted.</p>
                             </div>
                             <div class="doc-actions">
-                                <a href="docs/final-report-finn-oconnor.pdf" download class="btn-link" title="Download PDF">
+                                <a href="docs/kpi_dashboard_redacted.pdf" download class="btn-link" title="Download PDF">
                                     <i class="fas fa-download"></i>
                                 </a>
-                                <button class="btn-view-small" onclick="openViewer('docs/final-report-finn-oconnor.pdf', 'Final Report')">View</button>
+                                <button class="btn-view-small" onclick="openViewer('docs/kpi_dashboard_redacted.pdf', 'Final Report')">View</button>
                             </div>
                         </div>
                         <div class="document-row">
@@ -115,11 +117,13 @@
                 <article class="project-card" data-category="energy">
                     <div class="project-content">
                         <h2>IE-GB Interconnector Flow Prediction Model (XGBoost)</h2>
-                        <p>XGBoost model for forecasting net IE-GB interconnector flow at 30-minute resolution. This is a work in progress, and I would like to fine-tune the model in the future to better predict sharp swings and movements.</p>
+                        <p>Developed a machine learning forecasting model using XGBoost to predict net IE–GB interconnector power flows at 30-minute resolution. 
+                            The project focuses on feature engineering, hyperparameter optimisation, and model evaluation, with ongoing work to improve performance during periods of high market volatility and rapid flow reversals.</p>
                         <ul class="project-bullets">
-                            <li>Features day-ahead market prices from EPEX GB and SEMOpx, wind and demand forecasts, price spread metrics, and lagged flow history.</li>
-                            <li>Hyperparameters were tuned via Optuna.</li>
-                            <li>Achieved an R² value of 0.4822, MAE of 257.74 MW, and RMSE of 343.26 MW.</li>
+                            <li>Engineered a feature set incorporating EPEX GB and SEMOpx day-ahead electricity prices, wind generation forecasts, electricity demand forecasts, cross-market price spread metrics, and lagged interconnector flow data.</li>
+                            <li>Optimised model hyperparameters using Optuna with cross-validation to improve predictive performance and generalisation.</li>
+                            <li>Evaluated model performance using standard regression metrics, achieving an R² of 0.4822, MAE of 257.74 MW, and RMSE of 343.26 MW.</li>
+                            <li>Currently investigating additional features and modelling approaches to better capture abrupt market-driven flow changes and improve forecast accuracy during extreme operating conditions.</li>
                         </ul>
                         <div class="project-meta">
                             <span class="tag">Machine Learning</span>
@@ -141,11 +145,11 @@
                 <article class="project-card" data-category="energy">
                     <div class="project-content">
                         <h2>Solar Book Analysis and Strategy Backtesting (Redacted)</h2>
-                        <p>In the early months of my internship with ElectroRoute, I was tasked with conducting analysis on our solar book and suggesting new approaches to trading volumes.</p>
+                        <p>During the early stages of my internship at ElectroRoute, I conducted quantitative analysis of the company's solar generation portfolio to evaluate trading performance and identify opportunities to optimise auction volume allocation strategies.</p>
                         <ul class="project-bullets">
-                            <li>Conducted statistical analysis on forecast accuracy and investigated individual site dispatch-down.</li>
-                            <li>Hypothesised simple auction-based trading strategies and backtested them against historic performance.</li>
-                            <li>Proposed a systematic framework to predict the best auction split for a given trading day.</li>
+                            <li>Performed statistical analysis of forecast accuracy, generation profiles, and site-specific dispatch-down events to identify factors influencing trading performance.</li>
+                            <li>Designed and backtested multiple auction allocation strategies using historical market and generation data to evaluate their impact on trading outcomes.</li>
+                            <li>Proposed a plan to develop a systematic decision-making framework to estimate the optimal allocation of traded volumes across electricity market auctions for a given trading day.</li>
                         </ul>
                         <div class="project-meta">
                             <span class="tag">Statistics</span>
