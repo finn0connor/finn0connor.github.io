@@ -1,1 +1,1 @@
-# Personal Portfolio Live at: [finn0connor.github.io](https://finn0connor.github.io/)
+# Personal portfolio of work accessible via: [finn0connor.github.io](https://finn0connor.github.io/)
