@@ -1,650 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects | Finn O'Connor</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Projects by Finn O'Connor in energy trading, machine learning and engineering.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/svg+xml" href="images/diagram-project-solid-full.svg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
 </head>
-
-<body class="inner-page">
-    <!-- Navigation -->
-    <nav class="inner-nav">
-        <a href="index.html" class="nav-logo">Finn O'Connor: Portfolio</a>
-        <div class="nav-menu-center">
-            <a href="index.html">Home</a>
-            <a href="projects.html" class="active">Projects</a>
-            <a href="skills.html">Skills</a>
-            <a href="certifications.html">Certifications</a>
+<body>
+    <nav class="site-nav">
+        <div class="container">
+            <a href="index.html" class="brand">Finn O'Connor</a>
+            <div class="nav-links"><a href="index.html">About</a><a href="projects.html" class="active">Projects</a><a href="skills.html">Skills & Certifications</a></div>
         </div>
     </nav>
-    <main class="page-content">
+
+    <main>
         <div class="container">
-            <h1 class="page-title">Projects</h1>
-            <!-- Filter Buttons -->
-            <div class="filter-container">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="energy">Energy Trading</button>
-                <button class="filter-btn" data-filter="analysis">Engineering Analysis</button>
+            <header class="page-header">
+                <h1>Projects</h1>
+                <p class="lead">A selection of work from energy trading, machine learning and engineering coursework.</p>
+            </header>
+
+            <div class="filters">
+                <button class="filter active" data-filter="all">All</button>
+                <button class="filter" data-filter="energy">Energy &amp; Markets</button>
+                <button class="filter" data-filter="ml">Machine Learning</button>
+                <button class="filter" data-filter="eng">Engineering</button>
             </div>
-            <div class="projects-list">
-                <!-- I-SEM Price Volatility Research -->
-                <article class="project-card" data-category="energy">
-                    <div class="project-content">
-                        <h2>Outage-Driven Power Price Volatility in the I-SEM: A Technology Response Perspective</h2>
-                        <p>Research published with the Trinity College Dublin Commodities Society, examining how plant
-                            outages and low wind drive price volatility in the Irish electricity market, and which
-                            technologies can best address it.</p>
-                        <ul class="project-bullets">
-                            <li>Analysed the 9 September 2021 event, when Irish imbalance prices hit €4,680/MWh,
-                                tracing how GB scarcity pricing crossed the interconnectors via SO-SO trades.</li>
-                            <li>Explained how power is traded and priced in the I-SEM, from the day-ahead auction
-                                to the balancing market, and why volatility concentrates in real time.</li>
-                            <li>Evaluated flexible generation, low-carbon fuels, storage and interconnection
-                                against Ireland's rising demand and 2030 renewable targets.</li>
-                            <li>Built all market charts and statistics in Python from historic market data.</li>
-                        </ul>
-                        <div class="project-meta">
-                            <span class="tag">Power Markets</span>
-                            <span class="tag">Market Analysis</span>
-                            <span class="tag">Python</span>
-                            <span class="tag">Energy Policy</span>
-                        </div>
-                    </div>
-                    <div class="project-actions">
-                        <a href="docs/Outage_Driven_Power_Price_Volatility_in_the_ISEM_TCS_FOC.pdf" download class="btn-link" title="Download PDF">
-                            <i class="fas fa-download"></i>
-                        </a>
-                        <button class="btn-view"
-                            onclick="openViewer('docs/Outage_Driven_Power_Price_Volatility_in_the_ISEM_TCS_FOC.pdf', 'Outage-Driven Power Price Volatility in the I-SEM')">View</button>
-                    </div>
+
+            <div class="project-grid">
+                <article class="project" data-category="energy">
+                    <div class="meta">Master's thesis &middot; in progress</div>
+                    <h3>Forecasting Imbalance Price Spikes in the I-SEM</h3>
+                    <p>Probabilistic forecasts of the Irish imbalance price, updated at each auction stage from day-ahead to IDA3, using rare-event sensitivity analysis to find what drives price spikes.</p>
+                    <div class="tags"><span class="tag">Forecasting</span><span class="tag">Sensitivity Analysis</span><span class="tag">Python</span></div>
+                    <div class="links"><span class="note">Supervised by Asst. Prof. Rui Teixeira</span></div>
                 </article>
-                <!--Energy Trading Internship -->
-                <article class="project-card" data-category="energy">
-                    <div class="project-content">
-                        <h2>Energy Trading Internship Final Report: ElectroRoute</h2>
-                        <p>As part of my Mechanical Engineering degree, I completed a seven-month internship with
-                            ElectroRoute, an international energy trading company. Working on the Trading Operations
-                            Desk, I supported traders through market analysis, automation, and data-driven modelling
-                            using Python and SQL. Over the course of the placement, I designed and deployed a
-                            company-wide KPI dashboard, conducted a quantitative analysis of the solar trading book
-                            and backtested auction allocation strategies, built a machine learning model to forecast
-                            IE-GB interconnector flows, and developed and applied a structured trading strategy
-                            framework through daily paper trading. The final report was completed in partial
-                            fulfilment of my degree and summarises the projects, responsibilities, and technical
-                            work undertaken during my internship up to May 2026.</p>
-                        <ul class="project-bullets">
-                            <li>Overview of the Trading Operations Desk and day-to-day responsibilities.</li>
-                            <li>Summaries of technical projects, analytical work, and process improvements completed
-                                during the internship.</li>
-                            <li>Discussion of the methodologies, tools, and technologies used, including Python, SQL,
-                                and data analysis techniques.</li>
-                            <li>Reflection on key outcomes, skills developed, and lessons learned throughout the
-                                placement.</li>
-                        </ul>
-                        <div class="project-meta">
-                            <span class="tag">Python</span>
-                            <span class="tag">SQL</span>
-                            <span class="tag">Energy Markets</span>
-                            <span class="tag">Power and Gas Trading</span>
-                        </div>
-                    </div>
+                <article class="project" data-category="energy">
+                    <div class="meta">Trinity Commodities Society</div>
+                    <h3>Outage-Driven Power Price Volatility in the I-SEM</h3>
+                    <p>Analysis of the 9 September 2021 event, when Irish imbalance prices reached &euro;4,680/MWh, and which technologies could best reduce this kind of volatility.</p>
+                    <div class="tags"><span class="tag">Power Markets</span><span class="tag">Market Analysis</span><span class="tag">Python</span></div>
+                    <div class="links"><a href="docs/Outage_Driven_Power_Price_Volatility_in_the_ISEM_TCS_FOC.pdf" target="_blank" rel="noopener">Read report</a></div>
                 </article>
-                <!--Energy Trading KPI Dashboard-->
-                <article class="project-card" data-category="energy">
-                    <div class="project-content">
-                        <h2>Energy Trading KPI Dashboard</h2>
-                        <p>During my internship at ElectroRoute, I designed and developed a full-stack, server-hosted
-                            analytics dashboard using Python, Flask, SQL, and HTML with interactive Plotly charts, to
-                            monitor trading desk performance and provide real-time market intelligence for the Trading
-                            Operations team.</p>
-                        <ul class="project-bullets">
-                            <li>Developed and deployed the application on the company's internal network, providing
-                                organisation-wide access through a centrally hosted web server.</li>
-                            <li>Integrated SQL databases and automated data pipelines to deliver interactive
-                                visualisations and KPIs, including P&amp;L, generation, curtailment, market volatility,
-                                MCV, balancing costs, forecast accuracy, and trading position analysis.</li>
-                            <li>Designed a trader performance leaderboard covering IDA1, IDA2, IDA3, and Intraday
-                                Continuous (IDC) markets, enabling benchmarking and encouraging continuous performance
-                                improvement.</li>
-                            <li>Implemented a live market analytics module displaying key power market indicators such
-                                as system demand, wholesale electricity prices, renewable generation, and interconnector
-                                flows to support operational decision-making.</li>
-                            <li>Engineered the application with a modular, maintainable architecture and produced
-                                comprehensive technical documentation to support future development and long-term
-                                maintainability.</li>
-                        </ul>
-                        <p class="project-note">Further details available on request.</p>
-                        <div class="project-meta">
-                            <span class="tag">Python</span>
-                            <span class="tag">SQL</span>
-                            <span class="tag">Flask</span>
-                            <span class="tag">HTML</span>
-                            <span class="tag">Software Engineering</span>
-                            <span class="tag">Power Markets</span>
-                        </div>
-                    </div>
+                <article class="project" data-category="energy">
+                    <div class="meta">ElectroRoute internship</div>
+                    <h3>Trading Desk KPI Dashboard</h3>
+                    <p>A server-hosted analytics dashboard for the power trading desk, tracking desk performance and market data through automated SQL pipelines and interactive charts.</p>
+                    <div class="tags"><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">Flask</span><span class="tag">Plotly</span></div>
+                    <div class="links"><span class="note">Internal project, details on request</span></div>
                 </article>
-                <!--IE-GB Interconnector Flow Prediction Model (XGBoost)-->
-                <article class="project-card" data-category="energy">
-                    <div class="project-content">
-                        <h2>IE-GB Interconnector Flow Prediction Model (XGBoost)</h2>
-                        <p>Developed a machine learning forecasting model using XGBoost to predict net IE–GB
-                            interconnector power flows at 30-minute resolution. The project focuses on feature
-                            engineering, hyperparameter optimisation, and model evaluation, with ongoing work to improve
-                            performance during periods of high market volatility and rapid flow reversals.</p>
-                        <ul class="project-bullets">
-                            <li>Engineered a feature set incorporating EPEX GB and SEMOpx day-ahead electricity prices,
-                                wind generation forecasts, electricity demand forecasts, cross-market price spread
-                                metrics, and lagged interconnector flow data.</li>
-                            <li>Optimised model hyperparameters using Optuna with cross-validation to improve predictive
-                                performance and generalisation.</li>
-                            <li>Evaluated model performance using standard regression metrics, achieving an R² of
-                                0.4822, MAE of 257.74 MW, and RMSE of 343.26 MW.</li>
-                            <li>Currently investigating additional features and modelling approaches to better capture
-                                abrupt market-driven flow changes and improve forecast accuracy during extreme operating
-                                conditions.</li>
-                        </ul>
-                        <p class="project-note">Further details available on request.</p>
-                        <div class="project-meta">
-                            <span class="tag">Machine Learning</span>
-                            <span class="tag">European Power</span>
-                            <span class="tag">XGBoost</span>
-                            <span class="tag">Python</span>
-                            <span class="tag">SQL</span>
-                        </div>
-                    </div>
+                <article class="project" data-category="energy ml">
+                    <div class="meta">ElectroRoute internship</div>
+                    <h3>IE&ndash;GB Interconnector Flow Forecasting</h3>
+                    <p>An XGBoost model forecasting 30-minute interconnector flows from market prices, wind and demand forecasts and historical flows, tuned with Optuna.</p>
+                    <div class="tags"><span class="tag">Machine Learning</span><span class="tag">XGBoost</span><span class="tag">Time Series</span></div>
+                    <div class="links"><span class="note">Internal project, details on request</span></div>
                 </article>
-                <!--Solar Book Analysis and Strategy Backtesting-->
-                <article class="project-card" data-category="energy">
-                    <div class="project-content">
-                        <h2>Solar Book Analysis and Strategy Backtesting (Redacted)</h2>
-                        <p>During the early stages of my internship at ElectroRoute, I conducted quantitative analysis
-                            of the company's solar generation portfolio to evaluate trading performance and identify
-                            opportunities to optimise auction volume allocation strategies.</p>
-                        <ul class="project-bullets">
-                            <li>Performed statistical analysis of forecast accuracy, generation profiles, and
-                                site-specific dispatch-down events to identify factors influencing trading performance.
-                            </li>
-                            <li>Designed and backtested multiple auction allocation strategies using historical market
-                                and generation data to evaluate their impact on trading outcomes.</li>
-                            <li>Proposed a plan to develop a systematic decision-making framework to estimate the
-                                optimal allocation of traded volumes across electricity market auctions for a given
-                                trading day.</li>
-                        </ul>
-                        <p class="project-note">Further details available on request.</p>
-                        <div class="project-meta">
-                            <span class="tag">Statistics</span>
-                            <span class="tag">Solar Trading</span>
-                            <span class="tag">Python</span>
-                            <span class="tag">SQL</span>
-                            <span class="tag">Presentations</span>
-                        </div>
-                    </div>
+                <article class="project" data-category="energy">
+                    <div class="meta">ElectroRoute internship</div>
+                    <h3>Solar Book Analysis &amp; Strategy Backtesting</h3>
+                    <p>Statistical analysis of a solar portfolio's forecast accuracy and dispatch, and backtesting of auction volume allocation strategies.</p>
+                    <div class="tags"><span class="tag">Statistics</span><span class="tag">Backtesting</span><span class="tag">Python</span></div>
+                    <div class="links"><span class="note">Internal project, details on request</span></div>
                 </article>
-                <!--Development of an Acoustic Liner for UAV Applications-->
-                <article class="project-card" data-category="analysis">
-                    <div class="project-content">
-                        <h2>Development of an Acoustic Liner for UAV Applications</h2>
-                        <p>As part of a module called "Research Methods," we were tasked with conducting research into
-                            the development of acoustic liners to reduce noise pollution in drones.</p>
-                        <ul class="project-bullets">
-                            <li>Analysed research papers, simulated liner performance in MATLAB, and modelled 3D
-                                prototypes in SolidWorks.</li>
-                            <li>Presented findings in front of the entire class.</li>
-                            <li>Produced a conference paper detailing the performance of different liners, manufacturing
-                                strategies, and optimisation algorithms.</li>
-                        </ul>
-                        <div class="project-meta">
-                            <span class="tag">Acoustical Engineering</span>
-                            <span class="tag">MATLAB</span>
-                            <span class="tag">Mathematical Modelling</span>
-                            <span class="tag">SolidWorks</span>
-                            <span class="tag">Additive Manufacturing</span>
-                        </div>
-                    </div>
-                    <div class="project-documents">
-                        <div class="document-row">
-                            <div class="doc-info">
-                                <h3 class="doc-title">Conference Paper</h3>
-                            </div>
-                            <div class="doc-actions">
-                                <a href="docs/4E3_Research_Methods__G17_Assignment_4.pdf" download class="btn-link"
-                                    title="Download PDF">
-                                    <i class="fas fa-download"></i>
-                                </a>
-                                <button class="btn-view-small"
-                                    onclick="openViewer('docs/4E3_Research_Methods__G17_Assignment_4.pdf', 'Conference Paper')">View</button>
-                            </div>
-                        </div>
-                        <div class="document-row">
-                            <div class="doc-info">
-                                <h3 class="doc-title">Slideshow Presentation</h3>
-                            </div>
-                            <div class="doc-actions">
-                                <a href="docs/4E3-Research-Methods-Assignment3-Group17.pdf" download class="btn-link"
-                                    title="Download PDF">
-                                    <i class="fas fa-download"></i>
-                                </a>
-                                <button class="btn-view-small"
-                                    onclick="openViewer('docs/4E3-Research-Methods-Assignment3-Group17.pdf', 'Slideshow Presentation')">View</button>
-                            </div>
-                        </div>
-                        <div class="document-row">
-                            <div class="doc-info">
-                                <h3 class="doc-title">Literature Review</h3>
-                            </div>
-                            <div class="doc-actions">
-                                <a href="docs/4E3_Research_Methods__G17_Assignment_1.pdf" download class="btn-link"
-                                    title="Download PDF">
-                                    <i class="fas fa-download"></i>
-                                </a>
-                                <button class="btn-view-small"
-                                    onclick="openViewer('docs/4E3_Research_Methods__G17_Assignment_1.pdf', 'Literature Review')">View</button>
-                            </div>
-                        </div>
-                        <div class="document-row">
-                            <div class="doc-info">
-                                <h3 class="doc-title">Research Proposal</h3>
-                            </div>
-                            <div class="doc-actions">
-                                <a href="docs/4E3_Research_Methods__G17_Assignment_2.pdf" download class="btn-link"
-                                    title="Download PDF">
-                                    <i class="fas fa-download"></i>
-                                </a>
-                                <button class="btn-view-small"
-                                    onclick="openViewer('docs/4E3_Research_Methods__G17_Assignment_2.pdf', 'Research Proposal')">View</button>
-                            </div>
-                        </div>
-                    </div>
+                <article class="project" data-category="energy">
+                    <div class="meta">Case competition</div>
+                    <h3>ESB Energy Consulting Case Competition</h3>
+                    <p>Placed 2nd of 26 teams. Financial and risk analysis advising a board on whether to acquire a wind farm.</p>
+                    <div class="tags"><span class="tag">Financial Analysis</span><span class="tag">Risk Analysis</span><span class="tag">Energy</span></div>
+                    <div class="links"><a href="docs/DUCG Final Presentation_vF.pdf" target="_blank" rel="noopener">View presentation</a></div>
                 </article>
-                <!--Finite Element Analysis Optimisation-->
-                <article class="project-card" data-category="analysis">
-                    <div class="project-content">
-                        <h2>Finite Element Analysis Optimisation</h2>
-                        <p>Below are two projects that involved using finite element analysis to optimise the geometry
-                            and material of a smartphone chassis and a drone frame.</p>
-                        <div class="project-meta">
-                            <span class="tag">Finite Element Analysis (FEA)</span>
-                            <span class="tag">Structural Optimisation</span>
-                            <span class="tag">Heat Transfer</span>
-                            <span class="tag">SolidWorks</span>
-                        </div>
-                    </div>
-                    <div class="project-documents">
-                        <div class="document-row">
-                            <div class="doc-info">
-                                <h3 class="doc-title">Research & Innovation Showcase 2026</h3>
-                                <p class="doc-description">Selected to represent the Mechanical Engineering Class of
-                                    2027 at the Research and Innovation Showcase 2026, held by the Trinity School of
-                                    Engineering. Presented a poster and slideshow showcasing our work on the
-                                    optimisation of a smartphone chassis using FEA (report accessible in the tab below).
-                                </p>
-                            </div>
-                            <div class="doc-actions">
-                                <a href="docs/4B7-GroupB4-UG-Design-Presentation.pdf" download class="btn-link"
-                                    title="Download PDF">
-                                    <i class="fas fa-download"></i>
-                                </a>
-                                <button class="btn-view-small"
-                                    onclick="openViewer('docs/4B7-GroupB4-UG-Design-Presentation.pdf', 'Research & Innovation Showcase 2026')">View</button>
-                            </div>
-                        </div>
-                        <div class="document-row">
-                            <div class="doc-info">
-                                <h3 class="doc-title">FEA Optimisation of a Smartphone Chassis</h3>
-                                <p class="doc-description">Detailed report showing our design process.</p>
-                            </div>
-                            <div class="doc-actions">
-                                <a href="docs/CAD_Assignment_2.pdf" download class="btn-link" title="Download PDF">
-                                    <i class="fas fa-download"></i>
-                                </a>
-                                <button class="btn-view-small"
-                                    onclick="openViewer('docs/CAD_Assignment_2.pdf', 'FEA Optimisation of a Smartphone Chassis')">View</button>
-                            </div>
-                        </div>
-                        <div class="document-row">
-                            <div class="doc-info">
-                                <h3 class="doc-title">FEA Optimisation of a Wildfire Detection Drone</h3>
-                                <p class="doc-description">Optimised the topology and material of a drone frame using
-                                    FEA to make it suitable for conducting wildfire detection missions.</p>
-                            </div>
-                            <div class="doc-actions">
-                                <a href="docs/4B7_Computer_Aided_Design__B4_Assignment_3.pdf" download class="btn-link"
-                                    title="Download PDF">
-                                    <i class="fas fa-download"></i>
-                                </a>
-                                <button class="btn-view-small"
-                                    onclick="openViewer('docs/4B7_Computer_Aided_Design__B4_Assignment_3.pdf', 'FEA Optimisation of a Wildfire Detection Drone')">View</button>
-                            </div>
-                        </div>
-                    </div>
+                <article class="project" data-category="ml">
+                    <div class="meta">Deep learning module</div>
+                    <h3>Real-Time Image Super-Resolution</h3>
+                    <p>A CNN that upscales 32&times;32 images to 128&times;128, beating bicubic interpolation by 1.3 dB PSNR at under 0.5 ms per frame with 245k parameters. Developed over 11 documented experiments.</p>
+                    <div class="tags"><span class="tag">PyTorch</span><span class="tag">CNNs</span><span class="tag">Computer Vision</span></div>
+                    <div class="links"><a href="https://github.com/finn0connor/5C16-deep-learning" target="_blank" rel="noopener">View on GitHub</a></div>
                 </article>
-                <!-- Multibody Dynamics: Simulation of a Valvetrain System -->
-                <article class="project-card" data-category="analysis">
-                    <div class="project-content">
-                        <h2>Multibody Dynamics: Simulation of a Valvetrain System</h2>
-                        <p>Kinematic analysis of a valvetrain system using SolidWorks Motion Analysis and MATLAB.
-                            Investigated whether aftermarket valvetrain springs improve internal combustion engine
-                            performance.</p>
-                        <div class="project-meta">
-                            <span class="tag">Multibody Dynamics</span>
-                            <span class="tag">Simulations</span>
-                            <span class="tag">Mathematical Modelling</span>
-                            <span class="tag">SolidWorks</span>
-                            <span class="tag">MATLAB</span>
-                        </div>
-                    </div>
-                    <div class="project-actions">
-                        <a href="docs/4B17_Multibody_Dynamics__Main_Assignment.pdf" download class="btn-link"
-                            title="Download PDF">
-                            <i class="fas fa-download"></i>
-                        </a>
-                        <button class="btn-view"
-                            onclick="openViewer('docs/4B17_Multibody_Dynamics__Main_Assignment.pdf', 'Multibody Dynamics: Simulation of a Valvetrain System')">
-                            View
-                        </button>
-                    </div>
+                <article class="project" data-category="ml">
+                    <div class="meta">Deep learning module</div>
+                    <h3>CIFAR-10 Image Classifiers</h3>
+                    <p>Fully connected and convolutional neural networks for classifying CIFAR-10 images, built and trained in PyTorch.</p>
+                    <div class="tags"><span class="tag">PyTorch</span><span class="tag">CNNs</span><span class="tag">Classification</span></div>
+                    <div class="links"><a href="https://github.com/finn0connor/5C16-deep-learning" target="_blank" rel="noopener">View on GitHub</a></div>
                 </article>
-                <!-- CFD Analysis of a NACA3412 Aerofoil -->
-                <article class="project-card" data-category="analysis">
-                    <div class="project-content">
-                        <h2>CFD Analysis of a NACA3412 Aerofoil</h2>
-                        <p>CFD simulations comparing lift coefficients and aerodynamic behaviour across multiple
-                            aerofoil configurations.</p>
-                        <div class="project-meta">
-                            <span class="tag">ANSYS Fluent</span>
-                            <span class="tag">Computational Fluid Dynamics (CFD)</span>
-                            <span class="tag">MATLAB</span>
-                        </div>
-                    </div>
-                    <div class="project-actions">
-                        <a href="docs/4B13_Fluid_Mechanics_2__Assignment_2.pdf" download class="btn-link"
-                            title="Download PDF">
-                            <i class="fas fa-download"></i>
-                        </a>
-                        <button class="btn-view"
-                            onclick="openViewer('docs/4B13_Fluid_Mechanics_2__Assignment_2.pdf', 'CFD Analysis of a NACA3412 Aerofoil')">
-                            View
-                        </button>
-                    </div>
+                <article class="project" data-category="eng">
+                    <div class="meta">Research Methods</div>
+                    <h3>Acoustic Liner for UAV Noise Reduction</h3>
+                    <p>Research into acoustic liners to reduce drone noise: literature review, MATLAB simulation of liner performance, SolidWorks prototypes and a conference-style paper.</p>
+                    <div class="tags"><span class="tag">Acoustics</span><span class="tag">MATLAB</span><span class="tag">SolidWorks</span></div>
+                    <div class="links"><a href="docs/4E3_Research_Methods__G17_Assignment_4.pdf" target="_blank" rel="noopener">Paper</a><a href="docs/4E3-Research-Methods-Assignment3-Group17.pdf" target="_blank" rel="noopener">Slides</a><a href="docs/4E3_Research_Methods__G17_Assignment_1.pdf" target="_blank" rel="noopener">Literature review</a><a href="docs/4E3_Research_Methods__G17_Assignment_2.pdf" target="_blank" rel="noopener">Proposal</a></div>
                 </article>
-                <!-- Deformation Mechanics of Ripple-Wall-Slick Tyres in Drag Racing -->
-                <article class="project-card" data-category="analysis">
-                    <div class="project-content">
-                        <h2>Deformation Mechanics of Ripple-Wall-Slick Tyres in Drag Racing</h2>
-                        <p>Modelled the deformation of dragster tyres when accelerating from standstill to top speed.
-                        </p>
-                        <div class="project-meta">
-                            <span class="tag">Solid Mechanics</span>
-                            <span class="tag">Mathematical Modelling</span>
-                            <span class="tag">MATLAB</span>
-                        </div>
-                    </div>
-                    <div class="project-actions">
-                        <a href="docs/3B3_MicroProject_FinnOConnor_22336740.pdf" download class="btn-link"
-                            title="Download PDF">
-                            <i class="fas fa-download"></i>
-                        </a>
-                        <button class="btn-view"
-                            onclick="openViewer('docs/3B3_MicroProject_FinnOConnor_22336740.pdf', 'Deformation Mechanics of Ripple-Wall-Slick Tyres in Drag Racing')">
-                            View
-                        </button>
-                    </div>
+                <article class="project" data-category="eng">
+                    <div class="meta">Computer Aided Design</div>
+                    <h3>FEA Optimisation: Smartphone Chassis &amp; Drone Frame</h3>
+                    <p>Geometry and material optimisation using finite element analysis. Selected to represent the class at the School of Engineering Research &amp; Innovation Showcase 2026.</p>
+                    <div class="tags"><span class="tag">FEA</span><span class="tag">Optimisation</span><span class="tag">SolidWorks</span></div>
+                    <div class="links"><a href="docs/4B7-GroupB4-UG-Design-Presentation.pdf" target="_blank" rel="noopener">Showcase slides</a><a href="docs/CAD_Assignment_2.pdf" target="_blank" rel="noopener">Smartphone report</a><a href="docs/4B7_Computer_Aided_Design__B4_Assignment_3.pdf" target="_blank" rel="noopener">Drone report</a></div>
                 </article>
-                <!-- The Development of Flexi-Wings in Formula 1 -->
-                <article class="project-card" data-category="analysis">
-                    <div class="project-content">
-                        <h2>The Development of Flexi-Wings in Formula 1</h2>
-                        <p>Conducted research on the development of flexi-wings and assessed the controversy behind them
-                            in Formula 1. Investigated how carbon fibre composites are manufactured and their
-                            feasibility, and even conducted a CFD simulation to assess wing performance.</p>
-                        <div class="project-meta">
-                            <span class="tag">Materials Science</span>
-                            <span class="tag">Manufacturing Systems</span>
-                            <span class="tag">Ansys Fluent</span>
-                            <span class="tag">MATLAB</span>
-                        </div>
-                    </div>
-                    <div class="project-actions">
-                        <a href="docs/3B4-Mechanical-Engineering-Materials-finnoconnor.pdf" download class="btn-link"
-                            title="Download PDF">
-                            <i class="fas fa-download"></i>
-                        </a>
-                        <button class="btn-view"
-                            onclick="openViewer('docs/3B4-Mechanical-Engineering-Materials-finnoconnor.pdf', 'The Development of Flexi-Wings in Formula 1')">
-                            View
-                        </button>
-                    </div>
+                <article class="project" data-category="eng">
+                    <div class="meta">Multibody Dynamics</div>
+                    <h3>Valvetrain System Simulation</h3>
+                    <p>Kinematic simulation of an engine valvetrain to test whether aftermarket valve springs improve performance.</p>
+                    <div class="tags"><span class="tag">Dynamics</span><span class="tag">SolidWorks Motion</span><span class="tag">MATLAB</span></div>
+                    <div class="links"><a href="docs/4B17_Multibody_Dynamics__Main_Assignment.pdf" target="_blank" rel="noopener">Read report</a></div>
                 </article>
-                <!-- Kinematic Analysis of a Four-Bar Linkage Pumpjack System -->
-                <article class="project-card" data-category="analysis">
-                    <div class="project-content">
-                        <h2>Kinematic Analysis of a Four-Bar Linkage Pumpjack System</h2>
-                        <p>Simulated the kinematics of a four-bar linkage pumpjack system using MATLAB. Solved for
-                            position, acceleration, and velocity at each point of the cycle by applying knowledge of
-                            classical mechanics.</p>
-                        <div class="project-meta">
-                            <span class="tag">Classical Mechanics</span>
-                            <span class="tag">MATLAB</span>
-                            <span class="tag">Dynamics</span>
-                        </div>
-                    </div>
-                    <div class="project-actions">
-                        <a href="docs/3B5 Mechanics of Machines - Assignment 1 Part 2.pdf" download class="btn-link"
-                            title="Download PDF">
-                            <i class="fas fa-download"></i>
-                        </a>
-                        <button class="btn-view"
-                            onclick="openViewer('docs/3B5 Mechanics of Machines - Assignment 1 Part 2.pdf', 'Kinematic Analysis of a Four-Bar Linkage Pumpjack System')">
-                            View
-                        </button>
-                    </div>
+                <article class="project" data-category="eng">
+                    <div class="meta">Fluid Mechanics</div>
+                    <h3>CFD Analysis of a NACA 3412 Aerofoil</h3>
+                    <p>CFD simulations comparing lift and aerodynamic behaviour across aerofoil configurations.</p>
+                    <div class="tags"><span class="tag">CFD</span><span class="tag">ANSYS Fluent</span><span class="tag">MATLAB</span></div>
+                    <div class="links"><a href="docs/4B13_Fluid_Mechanics_2__Assignment_2.pdf" target="_blank" rel="noopener">Read report</a></div>
                 </article>
-                <!-- Autonomous Driving Buggy Development -->
-                <article class="project-card" data-category="analysis">
-                    <div class="project-content">
-                        <h2>Autonomous Driving Buggy Development</h2>
-                        <p>Built an autonomous buggy using an Arduino, a HuskyLens AI camera, and a PID controller.
-                            Please see the video to learn more about what we did.</p>
-                        <div class="project-meta">
-                            <span class="tag">Electronics</span>
-                            <span class="tag">C++</span>
-                            <span class="tag">Arduino</span>
-                        </div>
-                    </div>
-                    <div class="project-actions">
-                        <button class="btn-view"
-                            onclick="openVideoViewer('YMPw99gwM_k', 'Autonomous Driving Buggy Development')">
-                            Watch Video
-                        </button>
-                    </div>
+                <article class="project" data-category="eng">
+                    <div class="meta">Materials</div>
+                    <h3>Flexi-Wings in Formula 1</h3>
+                    <p>The engineering and controversy behind flexible wings in F1: carbon-fibre composite manufacturing, plus a CFD study of wing performance.</p>
+                    <div class="tags"><span class="tag">Composites</span><span class="tag">CFD</span><span class="tag">Materials</span></div>
+                    <div class="links"><a href="docs/3B4-Mechanical-Engineering-Materials-finnoconnor.pdf" target="_blank" rel="noopener">Read report</a></div>
                 </article>
-                <!--Thermodynamics and Heat Transfer Lab Experimentation-->
-                <article class="project-card" data-category="analysis">
-                    <div class="project-content">
-                        <h2>Thermodynamics and Heat Transfer Lab Experimentation</h2>
-                        <p>Lab assignments in thermodynamics and heat transfer analysis, exploring the granular
-                            thermodynamic processes behind a refrigerator and a heat exchanger.</p>
-                        <div class="project-meta">
-                            <span class="tag">Thermodynamics</span>
-                            <span class="tag">Heat Transfer</span>
-                            <span class="tag">Statistics</span>
-                        </div>
-                    </div>
-                    <div class="project-documents">
-                        <div class="document-row">
-                            <div class="doc-info">
-                                <h3 class="doc-title">Experimental Analysis of a Vapour-Compression Refrigeration System
-                                </h3>
-                                <p class="doc-description">Conducted analysis on the thermodynamics of a classic
-                                    refrigeration cycle. Solved for the system's coefficient of performance and
-                                    compressor efficiency.</p>
-                            </div>
-                            <div class="doc-actions">
-                                <a href="docs/3B1_Thermodynamics_Refrigeration_Lab_FOC_22336740.pdf" download
-                                    class="btn-link" title="Download PDF">
-                                    <i class="fas fa-download"></i>
-                                </a>
-                                <button class="btn-view-small"
-                                    onclick="openViewer('docs/3B1_Thermodynamics_Refrigeration_Lab_FOC_22336740.pdf', 'Experimental Analysis of a Vapour-Compression Refrigeration System')">View</button>
-                            </div>
-                        </div>
-                        <div class="document-row">
-                            <div class="doc-info">
-                                <h3 class="doc-title">Experimental Analysis of a Heat Exchanger</h3>
-                                <p class="doc-description">Analysed the heat transfer and thermodynamics of a cross-flow
-                                    heat exchanger using the logarithmic mean temperature difference (LMTD) approach.
-                                    Calculated the system's percentage heat loss, overall heat transfer coefficients,
-                                    and uncertainty.</p>
-                            </div>
-                            <div class="doc-actions">
-                                <a href="docs/4B4_Heat_Exchanger_Lab_Report_Mech-14.pdf" download class="btn-link"
-                                    title="Download PDF">
-                                    <i class="fas fa-download"></i>
-                                </a>
-                                <button class="btn-view-small"
-                                    onclick="openViewer('docs/4B4_Heat_Exchanger_Lab_Report_Mech-14.pdf', 'Experimental Analysis of a Heat Exchanger')">View</button>
-                            </div>
-                        </div>
-                    </div>
+                <article class="project" data-category="eng">
+                    <div class="meta">Solid Mechanics</div>
+                    <h3>Drag Racing Tyre Deformation</h3>
+                    <p>A model of how ripple-wall slick tyres deform as a dragster accelerates from standstill.</p>
+                    <div class="tags"><span class="tag">Solid Mechanics</span><span class="tag">Modelling</span><span class="tag">MATLAB</span></div>
+                    <div class="links"><a href="docs/3B3_MicroProject_FinnOConnor_22336740.pdf" target="_blank" rel="noopener">Read report</a></div>
                 </article>
-                <!-- ESB Energy Consulting Case Study Competition -->
-                <article class="project-card" data-category="energy">
-                    <div class="project-content">
-                        <h2>ESB Energy Consulting Case Study Competition</h2>
-                        <p>Placed 2nd out of 26 teams in the 2025 ESB Consulting Case Competition. Performed financial
-                            and risk analysis and presented our findings to the board of Emerald Energy plc to advise
-                            them on the decision to acquire Blackridge Wind Farm.</p>
-                        <div class="project-meta">
-                            <span class="tag">Financial Analysis</span>
-                            <span class="tag">Risk Analysis</span>
-                            <span class="tag">Public Speaking</span>
-                            <span class="tag">Energy</span>
-                        </div>
-                    </div>
-                    <div class="project-actions">
-                        <a href="docs/DUCG Final Presentation_vF.pdf" download class="btn-link" title="Download PDF">
-                            <i class="fas fa-download"></i>
-                        </a>
-                        <button class="btn-view"
-                            onclick="openViewer('docs/DUCG Final Presentation_vF.pdf', 'ESB Energy Consulting Case Study Competition')">
-                            View
-                        </button>
-                    </div>
+                <article class="project" data-category="eng">
+                    <div class="meta">Mechanics of Machines</div>
+                    <h3>Four-Bar Linkage Pumpjack Kinematics</h3>
+                    <p>Position, velocity and acceleration analysis of a pumpjack's four-bar linkage over a full cycle.</p>
+                    <div class="tags"><span class="tag">Kinematics</span><span class="tag">MATLAB</span></div>
+                    <div class="links"><a href="docs/3B5 Mechanics of Machines - Assignment 1 Part 2.pdf" target="_blank" rel="noopener">Read report</a></div>
+                </article>
+                <article class="project" data-category="eng">
+                    <div class="meta">Thermodynamics &amp; Heat Transfer</div>
+                    <h3>Refrigeration &amp; Heat Exchanger Labs</h3>
+                    <p>Experimental analysis of a vapour-compression refrigeration cycle and a cross-flow heat exchanger, including efficiency and uncertainty.</p>
+                    <div class="tags"><span class="tag">Thermodynamics</span><span class="tag">Heat Transfer</span><span class="tag">Experiments</span></div>
+                    <div class="links"><a href="docs/3B1_Thermodynamics_Refrigeration_Lab_FOC_22336740.pdf" target="_blank" rel="noopener">Refrigeration report</a><a href="docs/4B4_Heat_Exchanger_Lab_Report_Mech-14.pdf" target="_blank" rel="noopener">Heat exchanger report</a></div>
+                </article>
+                <article class="project" data-category="eng">
+                    <div class="meta">Electronics</div>
+                    <h3>Autonomous Driving Buggy</h3>
+                    <p>An autonomous buggy built with an Arduino, a HuskyLens AI camera and a PID controller.</p>
+                    <div class="tags"><span class="tag">Arduino</span><span class="tag">C++</span><span class="tag">Control</span></div>
+                    <div class="links"><a href="https://www.youtube.com/watch?v=YMPw99gwM_k" target="_blank" rel="noopener">Watch video</a></div>
                 </article>
             </div>
         </div>
     </main>
-    <!-- Full-screen PDF/Video Viewer Modal -->
-    <div id="viewer-modal" class="viewer-modal">
-        <div class="viewer-header">
-            <button class="viewer-back" onclick="closeViewer()">
-                <i class="fas fa-arrow-left"></i>
-                <span>Back to Projects</span>
-            </button>
-            <h2 id="viewer-title"></h2>
-            <div class="viewer-actions">
-                <a id="viewer-download" href="" download class="viewer-download-btn" title="Download PDF">
-                    <i class="fas fa-download"></i>
-                </a>
-                <button class="viewer-close" onclick="closeViewer()" title="Close">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-        </div>
-        <div class="viewer-body">
-            <iframe id="viewer-frame" src=""></iframe>
-        </div>
-    </div>
-    <footer class="inner-footer">
-        <div class="footer-content">
-            <p>&copy; 2025 Finn O'Connor</p>
-            <div class="footer-links">
-                <a href="https://github.com/finn0connor" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/finn-oconnor" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:foconno1@tcd.ie"><i class="fas fa-envelope"></i></a>
+
+    <footer>
+        <div class="container">
+            <span>&copy; 2026 Finn O'Connor</span>
+            <div class="social">
+                <a href="https://linkedin.com/in/finn-oconnor" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/finn0connor" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="mailto:foconno1@tcd.ie" aria-label="Email"><i class="fas fa-envelope"></i></a>
             </div>
         </div>
     </footer>
     <script>
-        // Detect if user is on mobile device
-        function isMobileDevice() {
-            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window
-                .innerWidth <= 768;
-        }
-
-        // Open PDF viewer (or download on mobile)
-        function openViewer(pdfUrl, title) {
-            if (isMobileDevice()) {
-                // On mobile, trigger download instead
-                const link = document.createElement('a');
-                link.href = pdfUrl;
-                link.download = pdfUrl.split('/').pop(); // Extract filename from URL
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-            } else {
-                // On desktop, open viewer
-                document.getElementById('viewer-title').textContent = title;
-                document.getElementById('viewer-frame').src = pdfUrl;
-                document.getElementById('viewer-download').href = pdfUrl;
-                document.getElementById('viewer-download').style.display = 'flex';
-                document.getElementById('viewer-modal').classList.add('active');
-                document.body.style.overflow = 'hidden';
-            }
-        }
-
-        // Open video viewer
-        function openVideoViewer(videoId, title) {
-            document.getElementById('viewer-title').textContent = title;
-            document.getElementById('viewer-frame').src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
-            document.getElementById('viewer-download').style.display = 'none';
-            document.getElementById('viewer-modal').classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-
-        // Close viewer
-        function closeViewer() {
-            document.getElementById('viewer-modal').classList.remove('active');
-            document.getElementById('viewer-frame').src = '';
-            document.body.style.overflow = 'auto';
-        }
-
-        // Close on escape key
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') closeViewer();
-        });
-
-        // Filter functionality
-        document.querySelectorAll('.filter-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                const filter = btn.dataset.filter;
-                document.querySelectorAll('.project-card').forEach(item => {
-                    if (filter === 'all' || item.dataset.category.includes(filter)) {
-                        item.style.display = 'flex';
-                    } else {
-                        item.style.display = 'none';
-                    }
+        // Show only the projects in the chosen category
+        const buttons = document.querySelectorAll('.filter');
+        const projects = document.querySelectorAll('.project');
+        buttons.forEach(function (button) {
+            button.addEventListener('click', function () {
+                buttons.forEach(function (b) { b.classList.remove('active'); });
+                button.classList.add('active');
+                const filter = button.dataset.filter;
+                projects.forEach(function (p) {
+                    const show = filter === 'all' || p.dataset.category.split(' ').includes(filter);
+                    p.classList.toggle('hidden', !show);
                 });
             });
         });
-
-        // Hide download icon buttons on mobile
-        document.addEventListener('DOMContentLoaded', () => {
-            if (isMobileDevice()) {
-                // Hide all download icon buttons (.btn-link)
-                document.querySelectorAll('.btn-link').forEach(btn => {
-                    btn.style.display = 'none';
-                });
-            }
-        });
     </script>
 </body>
-
 </html>
