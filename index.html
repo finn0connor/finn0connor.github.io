@@ -3,97 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Finn O'Connor | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Finn O'Connor</title>
+    <meta name="description" content="Finn O'Connor - Mechanical & Manufacturing Engineering student at Trinity College Dublin and energy trader intern.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/svg+xml" href="images/circle-user-solid-full.svg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
 </head>
-<body class="inner-page">
-
-    <!-- Navigation -->
-    <nav class="inner-nav">
-        <a href="index.html" class="nav-logo">Finn O'Connor: Portfolio</a>
-        <div class="nav-menu-center">
-            <a href="index.html" class="active">Home</a>
-            <a href="projects.html">Projects</a>
-            <a href="skills.html">Skills</a>
-            <a href="certifications.html">Certifications</a>
+<body>
+    <nav class="site-nav">
+        <div class="container">
+            <a href="index.html" class="brand">Finn O'Connor</a>
+            <div class="nav-links"><a href="index.html" class="active">About</a><a href="projects.html">Projects</a><a href="skills.html">Skills & Certifications</a></div>
         </div>
     </nav>
 
-    <main class="page-content">
+    <main>
         <div class="container">
-            <h1 class="page-title">About Me</h1>
-            
-            <div class="about-content">
-                <div class="about-sidebar">
-                    <div class="about-quick-info">
-                        <div class="quick-info-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Dublin, Ireland</span>
-                        </div>
-                        <div class="quick-info-item">
-                            <i class="fas fa-graduation-cap"></i>
-                            <span>Trinity College Dublin</span>
-                        </div>
-                        <div class="quick-info-item">
-                            <i class="fas fa-briefcase"></i>
-                            <span>ElectroRoute</span>
-                        </div>
-                    </div>
-
-                    <div class="about-links">
-                        <a href="docs/finnoconnor_resume.pdf" class="cv-button" download>
-                            <i class="fas fa-download"></i> Download CV
-                        </a>
-                        <a href="https://github.com/finn0connor" target="_blank" class="cv-button secondary">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-                        <a href="https://linkedin.com/in/finn-oconnor" target="_blank" class="cv-button secondary">
-                            <i class="fab fa-linkedin"></i> LinkedIn
-                        </a>
-                    </div>
-                </div>
-
+            <section class="about-hero">
+                <img src="images/me-on-mountain.jpg" alt="Finn O'Connor skiing in the mountains" class="about-photo">
                 <div class="about-text">
-                    <p class="about-intro">
-                        I'm a mechanical engineering student at Trinity College Dublin with a keen interest in energy trading.
-                        I have experience in power markets analysis, time series forecasting, and developing analytical tools using Python and SQL.
-                    </p>
-                
-                    <p>
-                        Outside of work, I play rugby, run, cycle, and go to the gym. I also enjoy tennis, golf, and piano.
-                        I like keeping up with developments in technology, commodity markets, and geopolitics, and I’ve spent two summers working abroad during university.
-                    </p>
-                    
-                    <h2>Education</h2>
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <h3>M.Eng, MAI (Hons) Mechanical and Manufacturing Engineering</h3>
-                            <p class="timeline-meta">Trinity College Dublin | Dublin, Ireland | Sep 2022 – May 2027</p>
-                            <p class="timeline-grade">Bachelors Grade: First-Class Honours (1.1, 75%)</p>
-                            <p>
-                                <strong>Relevant Modules:</strong> Deep Learning, Energy Policy &amp; Demand, Wind Energy, Low Carbon Power Technology,
-                                Low Carbon Transport Technology, Engineering Mathematics, Probability &amp; Statistics, Computational Science,
-                                Thermodynamics, Heat Transfer, Fluid Mechanics, Multibody Dynamics, Signals &amp; Systems, Computer Engineering
-                            </p>
-                            <p>
-                                <strong>Activities:</strong> Trinity Student Managed Fund, Trinity Commodities Society, Formula Trinity, DUFC Rugby
-                            </p>
-                        </div>
+                    <h1>Finn O'Connor</h1>
+                    <p class="about-role">Mechanical &amp; Manufacturing Engineering (MAI), Trinity College Dublin &middot; Energy Trader Intern, ElectroRoute</p>
+                    <p>I'm in the final year of an integrated Master's in Mechanical &amp; Manufacturing Engineering at Trinity College Dublin, and I work part-time on the power trading desk at ElectroRoute, covering the Irish and GB electricity markets.</p>
+                    <p>My interests are in power markets, forecasting, and applying data science and machine learning to energy and engineering problems. My master's thesis looks at forecasting imbalance price spikes in the Irish electricity market.</p>
+                    <p>Outside of work, I play rugby and enjoy running, cycling, tennis, golf and piano.</p>
+                    <div class="buttons">
+                        <a href="docs/finn-oconnor-cv.pdf" class="btn primary" download><i class="fas fa-download"></i> Download CV</a>
+                        <a href="https://linkedin.com/in/finn-oconnor" class="btn" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                        <a href="https://github.com/finn0connor" class="btn" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="mailto:foconno1@tcd.ie" class="btn"><i class="fas fa-envelope"></i> Email</a>
                     </div>
                 </div>
-            </div>
+            </section>
+
+            <section>
+                <div class="facts">
+                    <div class="fact">
+                        <div class="label">Education</div>
+                        <h3>MAI Mechanical &amp; Manufacturing Engineering</h3>
+                        <p>Trinity College Dublin, graduating 2027. First-Class Honours bachelor's (75%).</p>
+                    </div>
+                    <div class="fact">
+                        <div class="label">Experience</div>
+                        <h3>Energy Trader Intern, ElectroRoute</h3>
+                        <p>Power trading analyst; joining the live desk as a part-time shift trader in January 2027.</p>
+                    </div>
+                    <div class="fact">
+                        <div class="label">Leadership</div>
+                        <h3>Head of Power, Trinity Commodities Society</h3>
+                        <p>Founding member of Ireland's first student commodities society.</p>
+                    </div>
+                </div>
+            </section>
         </div>
     </main>
 
-    <footer class="inner-footer">
-        <div class="footer-content">
-            <p>&copy; 2026 Finn O'Connor</p>
-            <div class="footer-links">
-                <a href="https://github.com/finn0connor" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/finn-oconnor" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:foconno1@tcd.ie"><i class="fas fa-envelope"></i></a>
+    <footer>
+        <div class="container">
+            <span>&copy; 2026 Finn O'Connor</span>
+            <div class="social">
+                <a href="https://linkedin.com/in/finn-oconnor" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/finn0connor" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="mailto:foconno1@tcd.ie" aria-label="Email"><i class="fas fa-envelope"></i></a>
             </div>
         </div>
     </footer>
